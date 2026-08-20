@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Bicycle Shop & Accessories Store</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .faq-item { transition: all 0.3s ease; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+        .faq-item.active .faq-answer { max-height: 600px; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
+        .faq-icon { transition: transform 0.3s ease; }
+        .category-pill.active { background: linear-gradient(135deg, #E53935, #C62828); color: white !important; border-color: transparent; box-shadow: 0 4px 14px rgba(229, 57, 53, 0.4); }
+        .category-pill:hover:not(.active) { background: rgba(229, 57, 53, 0.08); color: #E53935 !important; border-color: rgba(229, 57, 53, 0.3); }
+        .search-ring:focus { box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.2); }
+        .category-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+        .category-header .icon-box { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .category-header h2 { font-size: 1.375rem; font-weight: 800; color: #1A1A2E; }
+        .category-header .count-badge { background: rgba(229, 57, 53, 0.1); color: #E53935; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 9999px; margin-left: 0.5rem; }
+        .contact-card { transition: all 0.3s ease; }
+        .contact-card:hover { transform: translateY(-4px); }
+
+        /* Light Mode Explicit High-Contrast Overrides */
+        html:not(.dark) .faq-item { background-color: #FFFFFF !important; border-color: #E5E7EB !important; }
+        html:not(.dark) .faq-question span { color: #1A1A2E !important; }
+        html:not(.dark) .faq-answer, html:not(.dark) .faq-answer p { color: #374151 !important; }
+        html:not(.dark) .faq-answer strong, html:not(.dark) .faq-answer b { color: #1A1A2E !important; }
+        html:not(.dark) .category-header h2 { color: #1A1A2E !important; }
+
+        /* Dark Mode Explicit High-Contrast Overrides */
+        html.dark body { background-color: #121212 !important; color: #E5E7EB !important; }
+        html.dark .faq-item { background-color: #1E1E1E !important; border-color: #333333 !important; }
+        html.dark .faq-question span { color: #FFFFFF !important; }
+        html.dark .faq-answer, html.dark .faq-answer p { color: #D1D5DB !important; }
+        html.dark .faq-answer strong, html.dark .faq-answer b { color: #FFFFFF !important; }
+        html.dark .category-header h2 { color: #FFFFFF !important; }
+        html.dark .category-pill:not(.active) { color: #D1D5DB !important; border-color: #333333 !important; }
+    </style>
+</head>
+<body class="bg-[#F8F9FA] font-['Inter',sans-serif]">
+
+    <!-- ==================== LOADING SCREEN ==================== -->
+    <div id="loading-screen" class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#0B1622]">
+        <div class="text-center">
+            <div class="mb-6">
+                <i class="fas fa-bicycle text-[#E53935] text-5xl animate-spin-slow"></i>
+            </div>
+            <div class="flex gap-1 justify-center mb-4">
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0s;"></span>
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0.1s;"></span>
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0.2s;"></span>
+            </div>
+            <p class="text-white text-sm tracking-widest uppercase">Loading</p>
+        </div>
+    </div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <div id="navbar-container"></div>
+
+    <!-- ==================== PAGE HEADER ==================== -->
+    <section class="page-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="content">
+                <span class="inline-flex items-center gap-2 bg-[#E53935]/20 border border-[#E53935]/30 text-[#FF6F61] text-xs font-semibold px-4 py-2 rounded-full mb-6 tracking-wide uppercase">
+                    <i class="fas fa-circle-question"></i>
+                    Help Center
+                </span>
+                <h1 class="text-white">Frequently Asked Questions</h1>
+                <div class="breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <span class="sep"><i class="fas fa-chevron-right text-xs"></i></span>
+                    <span class="current">FAQ</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SEARCH BAR ==================== -->
+    <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 -mt-7 relative z-10">
+        <div class="bg-white dark:bg-[#1E1E1E] rounded-2xl shadow-xl p-2">
+            <div class="relative">
+                <i class="fas fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-base pointer-events-none"></i>
+                <input
+                    type="text"
+                    id="faq-search"
+                    placeholder="Search your question..."
+                    class="w-full pl-11 pr-28 py-4 text-base rounded-xl border-0 focus:outline-none search-ring bg-[#F8F9FA] dark:bg-[#252525] text-gray-900 dark:text-white placeholder-gray-400"
+                >
+                <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-[#E53935] hover:bg-[#C62828] text-white px-6 py-2.5 rounded-lg transition-all duration-300 font-semibold text-sm shadow-md hover:shadow-lg">
+                    Search
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CATEGORY TABS ==================== -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+        <div class="flex flex-wrap justify-center gap-2" id="category-tabs">
+            <button class="category-pill active px-5 py-2.5 rounded-full border border-gray-200 dark:border-[#333] text-sm font-semibold transition-all duration-300" data-category="all">
+                <i class="fas fa-border-all mr-1.5"></i> All Questions
+            </button>
+            <button class="category-pill px-5 py-2.5 rounded-full border border-gray-200 dark:border-[#333] text-sm font-semibold transition-all duration-300 text-gray-600 dark:text-gray-400" data-category="general">
+                <i class="fas fa-bicycle mr-1.5"></i> General
+            </button>
+            <button class="category-pill px-5 py-2.5 rounded-full border border-gray-200 dark:border-[#333] text-sm font-semibold transition-all duration-300 text-gray-600 dark:text-gray-400" data-category="orders">
+                <i class="fas fa-truck-fast mr-1.5"></i> Orders & Shipping
+            </button>
+            <button class="category-pill px-5 py-2.5 rounded-full border border-gray-200 dark:border-[#333] text-sm font-semibold transition-all duration-300 text-gray-600 dark:text-gray-400" data-category="services">
+                <i class="fas fa-wrench mr-1.5"></i> Services
+            </button>
+            <button class="category-pill px-5 py-2.5 rounded-full border border-gray-200 dark:border-[#333] text-sm font-semibold transition-all duration-300 text-gray-600 dark:text-gray-400" data-category="account">
+                <i class="fas fa-user-shield mr-1.5"></i> Account & Payment
+            </button>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ ACCORDION ==================== -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- ===== GENERAL QUESTIONS ===== -->
+        <div class="faq-section mb-12" data-section="general">
+            <div class="category-header">
+                <div class="icon-box bg-[#E53935]/10">
+                    <i class="fas fa-bicycle text-[#E53935]"></i>
+                </div>
+                <div class="flex items-center">
+                    <h2>General Questions</h2>
+                    <span class="count-badge">4 Questions</span>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <div class="faq-item bg-white dark:bg-[#1E1E1E] rounded-xl border border-gray-100 dark:border-[#333] overflow-hidden mb-3">
+                    <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 dark:hover:bg-[#252525] transition" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-gray-900 dark:text-white text-sm">What types of bicycles do you sell?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-gray-400 text-xs"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        <p>We offer an extensive range of bicycles to suit every rider and terrain. Our collection includes <strong class="text-gray-900 dark:text-white">road bikes</strong> for speed enthusiasts, <strong class="text-gray-900 dark:text-white">mountain bikes (MTBs)</strong> for off-road adventurers, <strong class="text-gray-900 dark:text-white">hybrid bicycles</strong> for daily commuters, <strong class="text-gray-900 dark:text-white">electric bicycles</strong> for effortless rides, and <strong class="text-gray-900 dark:text-white">kids' cycles</strong> for young riders. We partner with top global brands like Trek, Giant, Hero, Firefox, and Cannondale to bring you the finest options across every price range.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-[#1E1E1E] rounded-xl border border-gray-100 dark:border-[#333] overflow-hidden mb-3">
+                    <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 dark:hover:bg-[#252525] transition" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-gray-900 dark:text-white text-sm">Do you offer warranty on bicycles?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-gray-400 text-xs"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        <p>Yes! All bicycles purchased from our store come with manufacturer warranties. Frame warranties typically range from <strong class="text-gray-900 dark:text-white">2 to 5 years</strong> depending on the brand, while components like derailleurs, brakes, and wheels carry a <strong class="text-gray-900 dark:text-white">1-year manufacturer warranty</strong>. Accessories also include brand-specific warranties. All warranty details are clearly listed on each product page and included with your purchase documentation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-[#1E1E1E] rounded-xl border border-gray-100 dark:border-[#333] overflow-hidden mb-3">
+                    <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 dark:hover:bg-[#252525] transition" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-gray-900 dark:text-white text-sm">Can I test ride a bicycle before buying?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-gray-400 text-xs"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        <p>Absolutely! We encourage test rides so you can experience the ride quality, comfort, and handling before making a decision. You can walk into any of our <strong class="text-gray-900 dark:text-white">25+ showrooms across India</strong> for an immediate test ride, or schedule one online through our website for a convenient time slot. We offer test rides for all bicycle categories including road bikes, mountain bikes, hybrids, and electric bicycles. Our trained staff will also help you find the perfect frame size and fit.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-[#1E1E1E] rounded-xl border border-gray-100 dark:border-[#333] overflow-hidden mb-3">
+                    <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 dark:hover:bg-[#252525] transition" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-gray-900 dark:text-white text-sm">Do you ship bicycles nationwide?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-gray-400 text-xs"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        <p>Yes, we ship across India! We offer <strong class="text-gray-900 dark:text-white">free shipping on all orders above &#8377;5,000</strong>. Standard delivery to metro cities takes 3-5 business days, tier-2 cities take 5-7 business days, and other areas take 7-10 business days. Express shipping is also available at &#8377;499 for delivery in 2-3 business days. All bicycles are carefully packaged and shipped approximately 85% assembled for safe transit, with free in-store assembly available at all our locations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ORDERS & SHIPPING ===== -->
+        <div class="faq-section mb-12" data-section="orders">
+            <div class="category-header">
+                <div class="icon-box bg-blue-500/10">
+                    <i class="fas fa-truck-fast text-blue-500"></i>
+                </div>
+                <div class="flex items-center">
+                    <h2>Orders & Shipping</h2>
+                    <span class="count-badge">3 Questions</span>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <div class="faq-item bg-white dark:bg-[#1E1E1E] rounded-xl border border-gray-100 dark:border-[#333] overflow-hidden mb-3">
+                    <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 dark:hover:bg-[#252525] transition" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-gray-900 dark:text-white text-sm">What is your return policy?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-gray-400 text-xs"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        <p>We offer a hassle-free <strong class="text-gray-900 dark:text-white">7-day return policy</strong> for unused items in their original packaging with all tags intact. For bicycles, the return window is <strong class="text-gray-900 dark:text-white">3 days</strong>, and the bike must be unused and in its original condition. Accessories like helmets, locks, and lights can be returned within 7 days. For online orders, we even cover the return shipping cost. Sale items and custom-built bicycles are non-returnable. Refunds are processed within 5-7 business days after inspection.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-[#1E1E1E] rounded-xl border border-gray-100 dark:border-[#333] overflow-hidden mb-3">
+                    <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 dark:hover:bg-[#252525] transition" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-gray-900 dark:text-white text-sm">How long does delivery take?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-gray-400 text-xs"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        <p>Delivery times vary by location: <strong class="text-gray-900 dark:text-white">Metro cities</strong> (Delhi, Mumbai, Bangalore, Chennai, Kolkata, Hyderabad) receive orders in 3-5 business days. <strong class="text-gray-900 dark:text-white">Tier-2 cities</strong> like Pune, Jaipur, Lucknow, and Chandigarh take 5-7 business days. Other areas across India take 7-10 business days. Express shipping (2-3 business days) is available for &#8377;499. You can track your order in real-time through your account dashboard or the tracking link sent to your email.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-[#1E1E1E] rounded-xl border border-gray-100 dark:border-[#333] overflow-hidden mb-3">
+                    <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 dark:hover:bg-[#252525] transition" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-gray-900 dark:text-white text-sm">Do you offer EMI options?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-gray-400 text-xs"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        <p>Yes! <strong class="text-gray-900 dark:text-white">EMI options are available</strong> on credit cards from major banks including HDFC, ICICI, SBI, Axis, Kotak, and American Express. Choose from 3, 6, 9, or 12 month EMI plans. <strong class="text-gray-900 dark:text-white">No-cost EMI</strong> options are available on select premium bicycles during promotional periods. The EMI option will be displayed at checkout if your card is eligible. You can also use popular buy-now-pay-later services for flexible payment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SERVICES ===== -->
+        <div class="faq-section mb-12" data-section="services">
+            <div class="category-header">
+                <div class="icon-box bg-emerald-500/10">
+                    <i class="fas fa-wrench text-emerald-500"></i>
+                </div>
+                <div class="flex items-center">
+                    <h2>Services</h2>
+                    <span class="count-badge">3 Questions</span>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <div class="faq-item bg-white dark:bg-[#1E1E1E] rounded-xl border border-gray-100 dark:border-[#333] overflow-hidden mb-3">
+                    <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 dark:hover:bg-[#252525] transition" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-gray-900 dark:text-white text-sm">What services do you offer?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-gray-400 text-xs"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        <p>We provide a comprehensive range of bicycle services at all our locations: <strong class="text-gray-900 dark:text-white">Basic Tune-Up</strong> (brake adjustment, gear indexing, tire inflation) completed in 2-3 hours, <strong class="text-gray-900 dark:text-white">Complete Service</strong> (full cleaning, lubrication, component inspection, wheel truing) taking 1-2 days, and <strong class="text-gray-900 dark:text-white">Annual Maintenance</strong> (bearing replacement, cable swap, full overhaul) taking 2-3 days. We also offer professional bicycle assembly, bike fitting sessions, and free safety inspections. All our technicians are Shimano and SRAM certified.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-[#1E1E1E] rounded-xl border border-gray-100 dark:border-[#333] overflow-hidden mb-3">
+                    <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 dark:hover:bg-[#252525] transition" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-gray-900 dark:text-white text-sm">How often should I service my bicycle?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-gray-400 text-xs"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        <p>We recommend servicing your bicycle every <strong class="text-gray-900 dark:text-white">3-6 months</strong> depending on your usage. Daily commuters should aim for a tune-up every 3 months, while recreational riders can service every 6 months. However, if you notice any unusual sounds, stiff gears, or reduced braking performance, bring it in immediately. Regular maintenance not only extends your bicycle's lifespan but also ensures optimal safety and performance on every ride. We also offer an annual maintenance plan for worry-free ownership.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-[#1E1E1E] rounded-xl border border-gray-100 dark:border-[#333] overflow-hidden mb-3">
+                    <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 dark:hover:bg-[#252525] transition" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-gray-900 dark:text-white text-sm">Do you offer home pickup for servicing?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-gray-400 text-xs"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        <p>Yes! We offer convenient <strong class="text-gray-900 dark:text-white">doorstep pickup and delivery</strong> for just &#8377;200 within our service areas. Our team will pick up your bicycle from your home, service it at our state-of-the-art workshop, and deliver it back in pristine condition. This service is available in all cities where we have a physical store presence. You can book pickup through our website, by calling us, or via WhatsApp. It's the easiest way to keep your ride in top shape without leaving your home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ACCOUNT & PAYMENT ===== -->
+        <div class="faq-section mb-12" data-section="account">
+            <div class="category-header">
+                <div class="icon-box bg-purple-500/10">
+                    <i class="fas fa-user-shield text-purple-500"></i>
+                </div>
+                <div class="flex items-center">
+                    <h2>Account & Payment</h2>
+                    <span class="count-badge">2 Questions</span>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <div class="faq-item bg-white dark:bg-[#1E1E1E] rounded-xl border border-gray-100 dark:border-[#333] overflow-hidden mb-3">
+                    <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 dark:hover:bg-[#252525] transition" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-gray-900 dark:text-white text-sm">How do I create an account?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-gray-400 text-xs"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        <p>Creating an account is quick and easy! Click the <strong class="text-gray-900 dark:text-white">"Sign Up"</strong> button in the top navigation bar, enter your email address or phone number, create a password, and you're all set. You can also sign up using your Google or Facebook account for instant access. An account gives you access to <strong class="text-gray-900 dark:text-white">order tracking, wishlist management, exclusive member deals, faster checkout with saved addresses</strong>, and personalized bicycle recommendations based on your riding preferences.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-[#1E1E1E] rounded-xl border border-gray-100 dark:border-[#333] overflow-hidden mb-3">
+                    <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 dark:hover:bg-[#252525] transition" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-gray-900 dark:text-white text-sm">What payment methods do you accept?</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-gray-400 text-xs"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        <p>We accept a wide range of payment methods for your convenience: <strong class="text-gray-900 dark:text-white">Credit & Debit Cards</strong> (Visa, MasterCard, Amex, RuPay), <strong class="text-gray-900 dark:text-white">UPI</strong> (Google Pay, PhonePe, Paytm), <strong class="text-gray-900 dark:text-white">Net Banking</strong> from all major banks, popular <strong class="text-gray-900 dark:text-white">wallets</strong>, <strong class="text-gray-900 dark:text-white">EMI options</strong> on select cards, and <strong class="text-gray-900 dark:text-white">Cash on Delivery (COD)</strong> for orders up to &#8377;50,000. All transactions are secured with 256-bit SSL encryption and PCI DSS compliance for complete peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- No Results Message -->
+        <div id="no-results" class="hidden text-center py-16">
+            <div class="w-20 h-20 bg-gray-100 dark:bg-[#252525] rounded-full flex items-center justify-center mx-auto mb-5">
+                <i class="fas fa-search text-3xl text-gray-300 dark:text-gray-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-700 dark:text-gray-300 mb-2">No questions found</h3>
+            <p class="text-gray-500 dark:text-gray-500 text-sm">Try a different search term or browse the categories above.</p>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT CTA SECTION ==================== -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-[#0B1622] via-[#121212] to-[#1a1a2e] py-20">
+        <div class="absolute inset-0">
+            <div class="absolute top-[-30%] right-[-10%] w-[500px] h-[500px] bg-[#E53935]/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-[-20%] left-[-5%] w-[400px] h-[400px] bg-[#FF6F61]/8 rounded-full blur-3xl"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-flex items-center gap-2 bg-[#E53935]/20 border border-[#E53935]/30 text-[#FF6F61] text-xs font-semibold px-4 py-2 rounded-full mb-6 tracking-wide uppercase">
+                    <i class="fas fa-headset"></i>
+                    Need Help?
+                </span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Still Have Questions?</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">Can't find the answer you're looking for? Our cycling experts are ready to help you with anything about bicycles, accessories, or services.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+                <div class="contact-card bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 hover:border-[#E53935]/30">
+                    <div class="w-14 h-14 bg-[#E53935]/15 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone-alt text-[#E53935] text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-bold text-sm mb-1">Call Us</h4>
+                    <p class="text-gray-400 text-sm mb-1">+91 98765 43210</p>
+                    <p class="text-gray-500 text-xs">Mon-Sat, 9AM - 8PM</p>
+                </div>
+
+                <div class="contact-card bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 hover:border-[#E53935]/30">
+                    <div class="w-14 h-14 bg-[#E53935]/15 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-[#E53935] text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-bold text-sm mb-1">Email Us</h4>
+                    <p class="text-gray-400 text-sm mb-1">info@bicycleshop.in</p>
+                    <p class="text-gray-500 text-xs">Reply within 2-4 hours</p>
+                </div>
+
+                <div class="contact-card bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 hover:border-[#E53935]/30">
+                    <div class="w-14 h-14 bg-[#E53935]/15 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-whatsapp text-[#E53935] text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-bold text-sm mb-1">WhatsApp</h4>
+                    <p class="text-gray-400 text-sm mb-1">+91 98765 43210</p>
+                    <p class="text-gray-500 text-xs">Quick responses, 24/7</p>
+                </div>
+
+                <div class="contact-card bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 hover:border-[#E53935]/30">
+                    <div class="w-14 h-14 bg-[#E53935]/15 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-store text-[#E53935] text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-bold text-sm mb-1">Visit Store</h4>
+                    <p class="text-gray-400 text-sm mb-1">25+ Locations</p>
+                    <p class="text-gray-500 text-xs">Find your nearest store</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="contact.html" class="inline-flex items-center gap-2.5 bg-[#E53935] hover:bg-[#C62828] text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                    <i class="fas fa-paper-plane"></i>
+                    Contact Our Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <div id="footer-container"></div>
+
+    <!-- ==================== SCROLL TO TOP ==================== -->
+    <button id="scroll-top" class="fixed bottom-6 right-6 w-12 h-12 bg-[#E53935] text-white rounded-xl shadow-lg flex items-center justify-center opacity-0 invisible z-50 hover:bg-[#C62828] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Loading screen
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const ls = document.getElementById('loading-screen');
+                ls.style.opacity = '0';
+                setTimeout(() => ls.style.display = 'none', 600);
+            }, 600);
+        });
+
+        // Toggle FAQ accordion
+        function toggleFaq(button) {
+            const faqItem = button.closest('.faq-item');
+            const isActive = faqItem.classList.contains('active');
+
+            // Close all other FAQ items in the same section
+            const section = faqItem.closest('.faq-section');
+            section.querySelectorAll('.faq-item.active').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+
+            faqItem.classList.toggle('active');
+        }
+
+        // Category tab filtering
+        document.querySelectorAll('.category-pill').forEach(tab => {
+            tab.addEventListener('click', function () {
+                document.querySelectorAll('.category-pill').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                // Reset search
+                document.getElementById('faq-search').value = '';
+                document.getElementById('no-results').classList.add('hidden');
+
+                const category = this.dataset.category;
+
+                document.querySelectorAll('.faq-section').forEach(section => {
+                    if (category === 'all' || section.dataset.section === category) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Search functionality
+        document.getElementById('faq-search').addEventListener('input', function () {
+            const query = this.value.toLowerCase().trim();
+
+            // Reset to "All" tab when searching
+            document.querySelectorAll('.category-pill').forEach(t => t.classList.remove('active'));
+            document.querySelector('[data-category="all"]').classList.add('active');
+
+            let anyVisible = false;
+
+            document.querySelectorAll('.faq-section').forEach(section => {
+                let sectionVisible = false;
+                section.querySelectorAll('.faq-item').forEach(item => {
+                    const question = item.querySelector('.faq-question span').textContent.toLowerCase();
+                    const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                    if (query === '' || question.includes(query) || answer.includes(query)) {
+                        item.style.display = 'block';
+                        sectionVisible = true;
+                        anyVisible = true;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                section.style.display = sectionVisible ? 'block' : 'none';
+            });
+
+            document.getElementById('no-results').classList.toggle('hidden', anyVisible);
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                scrollTopBtn.style.opacity = '1';
+                scrollTopBtn.style.visibility = 'visible';
+            } else {
+                scrollTopBtn.style.opacity = '0';
+                scrollTopBtn.style.visibility = 'hidden';
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Bicycle Shop & Accessories Store</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Professional bicycle servicing, tune-ups, brake repair, gear tuning, and annual maintenance plans at CycleHub.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .service-card-img { height: 220px; }
+        .pricing-highlight { transform: scale(1.05); }
+        .step-line { height: 3px; background: linear-gradient(90deg, #E53935, #FF6F61); }
+        .testimonial-card .stars { color: #FBBF24; }
+        .best-value-badge {
+            background: linear-gradient(135deg, #FF6F61, #E53935);
+            animation: pulse-badge 2s ease-in-out infinite;
+        }
+        @keyframes pulse-badge {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.4); }
+            50% { box-shadow: 0 0 0 8px rgba(229, 57, 53, 0); }
+        }
+        .pricing-popular { border: 2px solid #E53935; }
+        .pricing-popular::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #E53935;
+            color: white;
+            padding: 4px 20px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body class="bg-[#F8F9FA] font-['Inter',sans-serif]">
+
+    <!-- ==================== LOADING SCREEN ==================== -->
+    <div id="loading-screen" class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#0B1622]">
+        <div class="text-center">
+            <div class="mb-6">
+                <i class="fas fa-bicycle text-[#E53935] text-5xl animate-spin-slow"></i>
+            </div>
+            <div class="flex gap-1 justify-center mb-4">
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0s;"></span>
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0.1s;"></span>
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0.2s;"></span>
+            </div>
+            <p class="text-white text-sm tracking-widest uppercase">Loading CycleHub</p>
+        </div>
+    </div>
+
+    <!-- ==================== NAVBAR CONTAINER ==================== -->
+    <div id="navbar-container"></div>
+
+    <!-- ==================== PAGE HEADER ==================== -->
+    <section class="page-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="content">
+                <h1 class="text-white">Professional Bicycle Services</h1>
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="sep"><i class="fas fa-chevron-right text-xs"></i></span>
+                    <span class="current">Services</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES INTRO ==================== -->
+    <section class="section py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <span class="section-title">
+                    <span class="badge"><i class="fas fa-tools mr-1"></i> Expert Care</span>
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Expert Bicycle Care & Maintenance</h2>
+                <p class="text-gray-500 text-lg leading-relaxed mb-10">
+                    At CycleHub, we understand that your bicycle is more than just a mode of transportation -- it's your companion on every journey. Our certified mechanics bring years of experience, using only genuine parts and professional-grade tools to ensure your bike receives the care it deserves.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="counter-box">
+                        <div class="number">10,000+</div>
+                        <div class="label">Bikes Serviced</div>
+                    </div>
+                    <div class="counter-box">
+                        <div class="number">15+</div>
+                        <div class="label">Expert Mechanics</div>
+                    </div>
+                    <div class="counter-box">
+                        <div class="number">99%</div>
+                        <div class="label">Satisfaction Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES GRID ==================== -->
+    <section class="section py-20 bg-[#F8F9FA]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title">
+                    <span class="badge"><i class="fas fa-cog mr-1"></i> Our Services</span>
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">What We Offer</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Professional bicycle services tailored to keep your ride smooth, safe, and performing at its best</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1: Bike Tune-up -->
+                <div class="card group">
+                    <div class="relative overflow-hidden">
+                        <img src="images/services1.jpg" alt="Bike Tune-up" class="card-img service-card-img">
+                        <div class="absolute top-4 left-4 bg-[#E53935] text-white text-xs font-bold px-3 py-1 rounded-full">Popular</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-wrench text-[#E53935]"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Bike Tune-up</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Complete safety check, brake adjustment, gear tuning, tire inflation, and chain lubrication to keep your bike running smoothly.</p>
+                        <div class="flex items-center text-sm text-gray-400 mb-4">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>Est. 2-3 hours</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-[#E53935]">₹1,200</span>
+                            <button class="btn btn-primary btn-sm rounded-xl">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Brake Service -->
+                <div class="card group">
+                    <div class="relative overflow-hidden">
+                        <img src="images/services2.jpg" alt="Brake Service" class="card-img service-card-img">
+                        <div class="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">Essential</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-stop-circle text-amber-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Brake Service</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Complete brake system inspection, pad replacement, cable adjustment, and lever calibration for reliable stopping power.</p>
+                        <div class="flex items-center text-sm text-gray-400 mb-4">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>Est. 1-2 hours</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-[#E53935]">₹800</span>
+                            <button class="btn btn-primary btn-sm rounded-xl">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: Gear Service -->
+                <div class="card group">
+                    <div class="relative overflow-hidden">
+                        <img src="images/services3.jpg" alt="Gear Service" class="card-img service-card-img">
+                        <div class="absolute top-4 left-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">Precision</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-cogs text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Gear Service</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Derailleur calibration, shifter adjustment, cable replacement, and full drivetrain cleaning for smooth shifting across all gears.</p>
+                        <div class="flex items-center text-sm text-gray-400 mb-4">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>Est. 2-4 hours</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-[#E53935]">₹1,500</span>
+                            <button class="btn btn-primary btn-sm rounded-xl">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4: Tire Replacement -->
+                <div class="card group">
+                    <div class="relative overflow-hidden">
+                        <img src="images/services4.jpg" alt="Tire Replacement" class="card-img service-card-img">
+                        <div class="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">Quick Fix</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-circle-notch text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Tire Replacement</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Tire inspection, puncture repair, tube replacement, tire mounting, and proper inflation for a smooth and safe ride.</p>
+                        <div class="flex items-center text-sm text-gray-400 mb-4">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>Est. 30-60 mins</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-[#E53935]">₹600</span>
+                            <button class="btn btn-primary btn-sm rounded-xl">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5: Suspension Service -->
+                <div class="card group">
+                    <div class="relative overflow-hidden">
+                        <img src="images/services65.jpg" alt="Suspension Service" class="card-img service-card-img">
+                        <div class="absolute top-4 left-4 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">Advanced</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-arrows-alt-v text-purple-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Suspension Service</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Fork and rear shock servicing, seal replacement, oil change, spring calibration, and full suspension rebuild for optimal performance.</p>
+                        <div class="flex items-center text-sm text-gray-400 mb-4">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>Est. 4-6 hours</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-[#E53935]">₹3,500</span>
+                            <button class="btn btn-primary btn-sm rounded-xl">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6: Annual Maintenance Plan (Best Value) -->
+                <div class="card group relative">
+                    <div class="absolute -top-3 right-4 z-10">
+                        <span class="best-value-badge text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
+                            <i class="fas fa-crown mr-1"></i> Best Value
+                        </span>
+                    </div>
+                    <div class="relative overflow-hidden">
+                        <img src="images/services6.jpg" alt="Annual Maintenance Plan" class="card-img service-card-img">
+                        <div class="absolute top-4 left-4 bg-[#E53935] text-white text-xs font-bold px-3 py-1 rounded-full">Annual Plan</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-calendar-check text-[#E53935]"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Annual Maintenance Plan</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Comprehensive yearly plan with 4 scheduled services, priority booking, free pickup & delivery, and 15% discount on all parts.</p>
+                        <div class="flex items-center text-sm text-gray-400 mb-4">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>4 visits per year</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-2xl font-bold text-[#E53935]">₹4,999</span>
+                                <span class="text-gray-400 text-sm line-through ml-2">₹7,200</span>
+                            </div>
+                            <button class="btn btn-primary btn-sm rounded-xl">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== HOW IT WORKS ==================== -->
+    <section class="section py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title">
+                    <span class="badge"><i class="fas fa-list-ol mr-1"></i> Simple Process</span>
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">How It Works</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Getting your bicycle serviced is easy with our simple 4-step process</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                <!-- Connecting Line behind the icons -->
+                <div class="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-[3px] bg-gradient-to-r from-[#E53935] via-[#FF6F61] to-[#E53935] z-0"></div>
+
+                <!-- Step 1: Book -->
+                <div class="text-center group relative z-10">
+                    <div class="relative z-10 w-20 h-20 bg-[#E53935] text-white rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-red-200">
+                        <i class="fas fa-calendar-alt text-2xl"></i>
+                    </div>
+                    <span class="inline-block bg-red-100 text-[#E53935] text-xs font-bold px-3 py-1 rounded-full mb-3">Step 1</span>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Book Online</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Schedule your service appointment through our website or give us a call</p>
+                </div>
+
+                <!-- Step 2: Pick Up -->
+                <div class="text-center group relative z-10">
+                    <div class="relative z-10 w-20 h-20 bg-[#FF6F61] text-white rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-orange-200">
+                        <i class="fas fa-truck text-2xl"></i>
+                    </div>
+                    <span class="inline-block bg-orange-100 text-[#FF6F61] text-xs font-bold px-3 py-1 rounded-full mb-3">Step 2</span>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Bike Pick Up</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">We collect your bicycle from your doorstep at the scheduled time</p>
+                </div>
+
+                <!-- Step 3: Service -->
+                <div class="text-center group relative z-10">
+                    <div class="relative z-10 w-20 h-20 bg-[#E53935] text-white rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-red-200">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <span class="inline-block bg-red-100 text-[#E53935] text-xs font-bold px-3 py-1 rounded-full mb-3">Step 3</span>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Expert Service</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Our certified mechanics perform the service with genuine parts</p>
+                </div>
+
+                <!-- Step 4: Delivery -->
+                <div class="text-center group relative z-10">
+                    <div class="relative z-10 w-20 h-20 bg-[#FF6F61] text-white rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-orange-200">
+                        <i class="fas fa-bicycle text-2xl"></i>
+                    </div>
+                    <span class="inline-block bg-orange-100 text-[#FF6F61] text-xs font-bold px-3 py-1 rounded-full mb-3">Step 4</span>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Delivery Back</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">We deliver your perfectly tuned bicycle right back to your doorstep</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PRICING TABLE ==================== -->
+    <section class="section py-20 bg-[#F8F9FA]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title">
+                    <span class="badge"><i class="fas fa-tag mr-1"></i> Pricing Plans</span>
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Transparent Pricing</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Choose the perfect maintenance plan to keep your bicycle in peak condition year-round</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-start">
+                <!-- Basic Tier -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 relative">
+                    <div class="text-center mb-8">
+                        <div class="w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bicycle text-gray-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Basic</h3>
+                        <p class="text-gray-500 text-sm mb-4">For occasional riders</p>
+                        <div class="mb-2">
+                            <span class="text-4xl font-bold text-gray-900">₹999</span>
+                            <span class="text-gray-400 text-sm">/service</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>Safety inspection</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>Brake adjustment</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>Gear tuning</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>Tire inflation</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>Chain lubrication</span>
+                        </li>
+                        <li class="flex items-center text-gray-400 dark:text-gray-500 line-through opacity-75 text-sm">
+                            <i class="fas fa-times text-gray-400 dark:text-gray-500 mr-3 flex-shrink-0"></i>
+                            <span>Pickup & Delivery</span>
+                        </li>
+                        <li class="flex items-center text-gray-400 dark:text-gray-500 line-through opacity-75 text-sm">
+                            <i class="fas fa-times text-gray-400 dark:text-gray-500 mr-3 flex-shrink-0"></i>
+                            <span>Wheel truing</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-ghost w-full rounded-xl py-3">Get Started</button>
+                </div>
+
+                <!-- Premium Tier (Highlighted) -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 border-2 border-[#E53935] relative pricing-highlight">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#E53935] text-white text-xs font-bold px-5 py-1.5 rounded-full whitespace-nowrap">
+                        <i class="fas fa-star mr-1"></i> Most Popular
+                    </div>
+                    <div class="text-center mb-8 mt-2">
+                        <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-crown text-[#E53935] text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Premium</h3>
+                        <p class="text-gray-500 text-sm mb-4">For regular riders</p>
+                        <div class="mb-2">
+                            <span class="text-4xl font-bold text-[#E53935]">₹2,499</span>
+                            <span class="text-gray-400 text-sm">/service</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>Everything in Basic</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>Full bike wash & polish</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>Wheel truing & spoke tension</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>Bearing adjustment</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>Cable replacement</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>Pickup & Delivery</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>30-day service warranty</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary w-full rounded-xl py-3">Get Started</button>
+                </div>
+
+                <!-- Enterprise Tier -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 relative">
+                    <div class="text-center mb-8">
+                        <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-gem text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                        <p class="text-gray-500 text-sm mb-4">For fleet & pro riders</p>
+                        <div class="mb-2">
+                            <span class="text-4xl font-bold text-gray-900">₹4,999</span>
+                            <span class="text-gray-400 text-sm">/service</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>Everything in Premium</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>Full disassembly & rebuild</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>Frame detailing & polish</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>All parts replacement</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>Suspension service</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>Priority pickup & delivery</span>
+                        </li>
+                        <li class="flex items-center text-gray-600 text-sm">
+                            <i class="fas fa-check text-green-500 mr-3 flex-shrink-0"></i>
+                            <span>3-month service warranty</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-ghost w-full rounded-xl py-3">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="section py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title">
+                    <span class="badge"><i class="fas fa-quote-left mr-1"></i> Testimonials</span>
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">What Our Customers Say</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Real reviews from cyclists who trust us with their beloved bikes</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="stars mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text">"My Trek mountain bike was making strange noises for weeks. The team diagnosed and fixed it in just 2 hours. The bike rides smoother than when I first bought it! Highly recommend their service."</p>
+                    <div class="author">
+                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-[#E53935] to-[#FF6F61] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">RK</div>
+                        <div>
+                            <div class="name">Rajesh Kumar</div>
+                            <div class="role">Bike Tune-up Service</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="stars mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text">"I opted for the Premium plan and was amazed by the attention to detail. They cleaned every part, adjusted everything perfectly, and even replaced worn cables. The pickup and delivery service !"</p>
+                    <div class="author">
+                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-[#FF6F61] to-[#E53935] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">PS</div>
+                        <div>
+                            <div class="name">Priya Sharma</div>
+                            <div class="role">Premium Service Plan</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="stars mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text">"As a competitive cyclist, I needed precise gear and brake servicing. The mechanics spent over an hour ensuring everything was spot-on. My performance has improved significantly. Worth every rupee!"</p>
+                    <div class="author">
+                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">AM</div>
+                        <div>
+                            <div class="name">Amit Mehta</div>
+                            <div class="role">Gear & Brake Service</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="relative py-24 overflow-hidden" style="background: linear-gradient(135deg, #0B1622 0%, #1a1a2e 50%, #121212 100%);">
+        <div class="absolute inset-0 opacity-10">
+            <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=1920&q=80" alt="" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-[#E53935]/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-[#FF6F61]/10 rounded-full blur-3xl"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="inline-block bg-[#E53935]/20 text-[#FF6F61] text-sm font-semibold px-5 py-2 rounded-full mb-6 tracking-wide border border-[#E53935]/30">
+                <i class="fas fa-bolt mr-2"></i> Book Your Service Today
+            </span>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Service Your Bike?</h2>
+            <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+                Give your bicycle the professional care it deserves. Book a service now and experience the CycleHub difference.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="contact.html" class="btn btn-primary btn-lg rounded-xl shadow-lg shadow-red-900/30 inline-flex items-center gap-2">
+                    <i class="fas fa-calendar-check"></i>
+                    Book Service
+                </a>
+                <a href="tel:+919876543210" class="btn btn-outline btn-lg rounded-xl border-white/30 text-white hover:bg-white hover:text-[#121212] inline-flex items-center gap-2">
+                    <i class="fas fa-phone-alt"></i>
+                    Call Us: +91 98765 43210
+                </a>
+            </div>
+            <div class="flex items-center justify-center gap-8 mt-10 text-gray-500 text-sm">
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-check-circle text-green-500"></i> Same Day Service
+                </span>
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-check-circle text-green-500"></i> Free Pick Up & Drop
+                </span>
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-check-circle text-green-500"></i> Genuine Parts
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER CONTAINER ==================== -->
+    <div id="footer-container"></div>
+
+    <!-- ==================== SCROLL TO TOP ==================== -->
+    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

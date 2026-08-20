@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CycleHub | India's Premium Bicycle Store</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Learn about CycleHub's journey since 2010 — our story, mission, values, and the passionate team behind India's premium bicycle store.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#F8F9FA] font-['Inter',sans-serif]">
+
+    <!-- ==================== LOADING SCREEN ==================== -->
+    <div id="loading-screen" class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#0B1622]">
+        <div class="text-center">
+            <div class="mb-6">
+                <i class="fas fa-bicycle text-[#E53935] text-5xl animate-spin-slow"></i>
+            </div>
+            <div class="flex gap-1 justify-center mb-4">
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0s;"></span>
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0.1s;"></span>
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0.2s;"></span>
+            </div>
+            <p class="text-white text-sm tracking-widest uppercase">Loading CycleHub</p>
+        </div>
+    </div>
+
+    <!-- ==================== NAVBAR CONTAINER ==================== -->
+    <div id="navbar-container"></div>
+
+    <!-- ==================== PAGE HEADER ==================== -->
+    <section class="page-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+            <div class="content">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4">About Us</h1>
+                <nav class="breadcrumb">
+                    <a href="index.html" class="hover:text-[#E53935] transition-colors">Home</a>
+                    <span class="sep"><i class="fas fa-chevron-right text-xs"></i></span>
+                    <span class="current">About Us</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== OUR STORY ==================== -->
+    <section class="section py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div>
+                    <span class="inline-flex items-center gap-2 bg-[#E53935]/10 text-[#E53935] px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+                        <i class="fas fa-book-open"></i> Our Story
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">From a Small Repair Shop to a <span class="text-[#E53935]">Premium Bicycle</span> Destination</h2>
+                    <p class="text-gray-600 leading-relaxed mb-5">
+                        In 2010, two passionate cyclists — Rajesh Kumar and his childhood friend — opened a modest bicycle repair shop in the heart of the city. What started as a humble garage workspace with basic tools and an unwavering love for two-wheelers has since transformed into one of India's most respected bicycle retail destinations.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-5">
+                        The early days were defined by long hours, greasy hands, and a deep commitment to getting every repair right. Customers didn't just come for fixes — they came for honest advice, genuine parts, and the kind of care you'd only find from someone who truly understands bicycles. Word spread quickly, and the shop became a gathering point for local cycling enthusiasts.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-5">
+                        By 2013, the demand for quality bicycles — not just repairs — was undeniable. We expanded into retail, partnering with five leading brands and curating a selection of road bikes, mountain bikes, hybrid commuters, and kids' cycles. The response was overwhelming, and we realized that cyclists across the country deserved better access to premium products and expert guidance.
+                    </p>
+            
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-[#E53935]/10 rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fas fa-check text-[#E53935] font-bold text-sm sm:text-base"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900 dark:text-white text-sm">Authorized Dealer</p>
+                                <p class="text-gray-500 text-xs">100+ Global Brands</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-[#FF6F61]/10 rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fas fa-check text-[#FF6F61] font-bold text-sm sm:text-base"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900 dark:text-white text-sm">Certified Service</p>
+                                <p class="text-gray-500 text-xs">Shimano & SRAM Trained</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative mt-8 lg:mt-0">
+                    <div class="bg-gradient-to-br from-[#E53935]/5 to-[#FF6F61]/5 rounded-2xl p-4 sm:p-6 md:p-10 relative">
+                        <img src="images/about1.jpg" alt="CycleHub Bicycle Showroom" class="rounded-2xl w-full shadow-lg">
+                        <div class="absolute bottom-3 left-3 sm:-bottom-6 sm:-left-6 bg-[#E53935] text-white rounded-xl sm:rounded-2xl px-4 py-2.5 sm:px-6 sm:py-4 shadow-xl">
+                            <p class="text-2xl sm:text-3xl font-black">15+</p>
+                            <p class="text-xs sm:text-sm font-medium text-white/90">Years of Passion</p>
+                        </div>
+                        <div class="absolute top-3 right-3 sm:-top-5 sm:-right-5 bg-white dark:bg-[#1E1E1E] rounded-xl sm:rounded-2xl px-4 py-2.5 sm:px-5 sm:py-4 shadow-xl border border-gray-100 dark:border-[#333]">
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-users text-[#FF6F61] text-base sm:text-lg"></i>
+                                <div>
+                                    <p class="text-base sm:text-lg font-black text-gray-900 dark:text-white">150+</p>
+                                    <p class="text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 font-medium">Team Members</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== STATS SECTION ==================== -->
+    <section class="section py-16 sm:py-20 bg-[#121212]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+                <div class="counter-box bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 md:p-8 text-center hover:bg-white/10 transition-all duration-500 group">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-[#E53935]/10 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-calendar-alt text-[#E53935] text-xl sm:text-2xl"></i>
+                    </div>
+                    <p class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-1 sm:mb-2" data-counter="15">0</p>
+                    <p class="text-gray-400 text-xs sm:text-sm font-medium">Years Experience</p>
+                </div>
+                <div class="counter-box bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 md:p-8 text-center hover:bg-white/10 transition-all duration-500 group">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-[#FF6F61]/10 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-smile-beam text-[#FF6F61] text-xl sm:text-2xl"></i>
+                    </div>
+                    <p class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-1 sm:mb-2" data-counter="50000">0</p>
+                    <p class="text-gray-400 text-xs sm:text-sm font-medium">Happy Customers</p>
+                </div>
+                <div class="counter-box bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 md:p-8 text-center hover:bg-white/10 transition-all duration-500 group">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-[#E53935]/10 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-bicycle text-[#E53935] text-xl sm:text-2xl"></i>
+                    </div>
+                    <p class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-1 sm:mb-2" data-counter="500">0</p>
+                    <p class="text-gray-400 text-xs sm:text-sm font-medium">Products</p>
+                </div>
+                <div class="counter-box bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 md:p-8 text-center hover:bg-white/10 transition-all duration-500 group">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-[#FF6F61]/10 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-handshake text-[#FF6F61] text-xl sm:text-2xl"></i>
+                    </div>
+                    <p class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-1 sm:mb-2" data-counter="100">0</p>
+                    <p class="text-gray-400 text-xs sm:text-sm font-medium">Brands</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== OUR TEAM ==================== -->
+    <section class="section py-20 bg-[#F8F9FA]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title text-[#E53935] font-semibold text-sm uppercase tracking-widest">The People Behind the Passion</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Meet Our Team</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Passionate professionals dedicated to making your cycling experience extraordinary</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
+                <!-- CEO -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group hover:-translate-y-2 flex flex-col h-full justify-between">
+                    <div class="relative h-72 overflow-hidden flex-shrink-0">
+                        <img src="images/home1-20.jpg" alt="Rajesh Kumar - CEO" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-bold text-white">Rajesh Kumar</h3>
+                            <p class="text-[#FF6F61] font-semibold text-sm">Founder & CEO</p>
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1 justify-between">
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">A cyclist for over 20 years, Rajesh founded CycleHub with a simple dream — to give every rider the authentic experience he found on the open road. He still leads weekly group rides from the flagship store.</p>
+                        <div class="flex gap-2 items-center justify-start mt-auto pt-3 border-t border-gray-100">
+                            <a href="#" class="w-9 h-9 bg-[#E53935]/10 rounded-full flex items-center justify-center text-[#E53935] hover:bg-[#E53935] hover:text-white transition-all duration-300" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in text-sm"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 bg-[#E53935]/10 rounded-full flex items-center justify-center text-[#E53935] hover:bg-[#E53935] hover:text-white transition-all duration-300" aria-label="Twitter">
+                                <i class="fab fa-twitter text-sm"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 bg-[#E53935]/10 rounded-full flex items-center justify-center text-[#E53935] hover:bg-[#E53935] hover:text-white transition-all duration-300" aria-label="Instagram">
+                                <i class="fab fa-instagram text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manager -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group hover:-translate-y-2 flex flex-col h-full justify-between">
+                    <div class="relative h-72 overflow-hidden flex-shrink-0">
+                        <img src="images/home1-21.jpg" alt="Priya Sharma - Manager" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-bold text-white">Priya Sharma</h3>
+                            <p class="text-[#FF6F61] font-semibold text-sm">Operations Manager</p>
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1 justify-between">
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">With 12 years of retail operations experience, Priya ensures every store, warehouse, and delivery runs like clockwork. She streamlined our supply chain to cut delivery times by 40%.</p>
+                        <div class="flex gap-2 items-center justify-start mt-auto pt-3 border-t border-gray-100">
+                            <a href="#" class="w-9 h-9 bg-[#E53935]/10 rounded-full flex items-center justify-center text-[#E53935] hover:bg-[#E53935] hover:text-white transition-all duration-300" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in text-sm"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 bg-[#E53935]/10 rounded-full flex items-center justify-center text-[#E53935] hover:bg-[#E53935] hover:text-white transition-all duration-300" aria-label="Twitter">
+                                <i class="fab fa-twitter text-sm"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 bg-[#E53935]/10 rounded-full flex items-center justify-center text-[#E53935] hover:bg-[#E53935] hover:text-white transition-all duration-300" aria-label="Instagram">
+                                <i class="fab fa-instagram text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Head Mechanic -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group hover:-translate-y-2 flex flex-col h-full justify-between">
+                    <div class="relative h-72 overflow-hidden flex-shrink-0">
+                        <img src="images/home1-22.jpg" alt="Arun Patel - Head Mechanic" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-bold text-white">Arun Patel</h3>
+                            <p class="text-[#FF6F61] font-semibold text-sm">Head Mechanic</p>
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1 justify-between">
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">A certified Shimano and SRAM technician with 15 years of hands-on experience. Arun has serviced over 8,000 bicycles and trains our entire service team in the latest repair techniques.</p>
+                        <div class="flex gap-2 items-center justify-start mt-auto pt-3 border-t border-gray-100">
+                            <a href="#" class="w-9 h-9 bg-[#E53935]/10 rounded-full flex items-center justify-center text-[#E53935] hover:bg-[#E53935] hover:text-white transition-all duration-300" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in text-sm"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 bg-[#E53935]/10 rounded-full flex items-center justify-center text-[#E53935] hover:bg-[#E53935] hover:text-white transition-all duration-300" aria-label="Twitter">
+                                <i class="fab fa-twitter text-sm"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 bg-[#E53935]/10 rounded-full flex items-center justify-center text-[#E53935] hover:bg-[#E53935] hover:text-white transition-all duration-300" aria-label="Instagram">
+                                <i class="fab fa-instagram text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sales Lead -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group hover:-translate-y-2 flex flex-col h-full justify-between">
+                    <div class="relative h-72 overflow-hidden flex-shrink-0">
+                        <img src="images/about2.jpg" alt="Sneha Reddy - Sales Lead" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-bold text-white">Sneha Reddy</h3>
+                            <p class="text-[#FF6F61] font-semibold text-sm">Sales Lead</p>
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1 justify-between">
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Sneha brings 10 years of brand-building experience across sports and lifestyle industries. She's the creative force behind our campaigns and built our social media community from zero to 150K+.</p>
+                        <div class="flex gap-2 items-center justify-start mt-auto pt-3 border-t border-gray-100">
+                            <a href="#" class="w-9 h-9 bg-[#E53935]/10 rounded-full flex items-center justify-center text-[#E53935] hover:bg-[#E53935] hover:text-white transition-all duration-300" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in text-sm"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 bg-[#E53935]/10 rounded-full flex items-center justify-center text-[#E53935] hover:bg-[#E53935] hover:text-white transition-all duration-300" aria-label="Twitter">
+                                <i class="fab fa-twitter text-sm"></i>
+                            </a>
+                            <a href="#" class="w-9 h-9 bg-[#E53935]/10 rounded-full flex items-center justify-center text-[#E53935] hover:bg-[#E53935] hover:text-white transition-all duration-300" aria-label="Instagram">
+                                <i class="fab fa-instagram text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MISSION & VALUES ==================== -->
+    <section class="section py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title text-[#E53935] font-semibold text-sm uppercase tracking-widest">What Drives Us</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Our Mission & Values</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">The principles that guide everything we do at CycleHub</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Mission -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 hover:shadow-xl transition-all duration-500 group hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#E53935] to-[#FF6F61]"></div>
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 bg-[#E53935]/10 rounded-2xl flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-bullseye text-[#E53935] text-xl sm:text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 sm:mb-4">Our Mission</h3>
+                    <p class="text-[#E53935] font-semibold italic text-sm mb-4">"To make cycling accessible, enjoyable, and sustainable for everyone."</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        We believe cycling is more than transportation — it's a lifestyle that promotes health, happiness, and environmental responsibility. Our mission is to remove every barrier between a person and the open road, from stocking bicycles at every price point to offering free fit sessions and community group rides.
+                    </p>
+                </div>
+
+                <!-- Vision -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 hover:shadow-xl transition-all duration-500 group hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF6F61] to-[#E53935]"></div>
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 bg-[#FF6F61]/10 rounded-2xl flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-eye text-[#FF6F61] text-xl sm:text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 sm:mb-4">Our Vision</h3>
+                    <p class="text-[#FF6F61] font-semibold italic text-sm mb-4">"To become India's most trusted bicycle destination."</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        We envision a future where choosing a bicycle is as exciting and informed as choosing a car. A future where every cyclist — regardless of experience or budget — has access to the best products, the best advice, and the best service in the country. We're building India's most comprehensive cycling ecosystem.
+                    </p>
+                </div>
+
+                <!-- Values -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 hover:shadow-xl transition-all duration-500 group hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#E53935] to-[#FF6F61]"></div>
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 bg-[#E53935]/10 rounded-2xl flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-heart text-[#E53935] text-xl sm:text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 sm:mb-4">Our Values</h3>
+                    <p class="text-[#E53935] font-semibold italic text-sm mb-4">"Integrity, passion, and community in everything we do."</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        From stocking bicycles at every price point to offering free fit sessions and community group rides, we actively work to make cycling approachable for beginners and rewarding for veterans. Every product we sell and every interaction we have is guided by these core values.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Values List -->
+            
+        </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="section py-20 bg-gradient-to-r from-[#E53935] to-[#FF6F61] relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-[150px] -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-[150px] translate-x-1/2 translate-y-1/2"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-8 backdrop-blur-sm">
+                <i class="fas fa-bicycle text-white text-3xl"></i>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-black text-white mb-6">Ready to Start Your Cycling Journey?</h2>
+            <p class="text-white/80 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+                Whether you're upgrading your ride, starting your first cycling adventure, or looking for expert service — we're here for you. Visit our showroom or browse our full collection online.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="contact.html" class="inline-flex items-center gap-2 bg-white text-[#E53935] px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                    <i class="fas fa-map-marker-alt"></i> Visit Us
+                </a>
+                <a href="accessories.html" class="inline-flex items-center gap-2 bg-white/10 border-2 border-white/40 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-[#E53935] hover:border-white transition-all duration-300">
+                    <i class="fas fa-shopping-bag"></i> Shop Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER CONTAINER ==================== -->
+    <div id="footer-container"></div>
+
+    <!-- ==================== SCROLL TO TOP BUTTON ==================== -->
+    <button id="scroll-top" class="fixed bottom-6 right-6 w-12 h-12 bg-[#E53935] hover:bg-[#C62828] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50 opacity-0 pointer-events-none translate-y-4">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loading-screen');
+            setTimeout(function() {
+                loader.style.opacity = '0';
+                loader.style.transition = 'opacity 0.5s ease';
+                setTimeout(function() {
+                    loader.style.display = 'none';
+                }, 500);
+            }, 800);
+        });
+
+        // Scroll to top button
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.getElementById('scroll-top');
+            if (window.scrollY > 400) {
+                scrollBtn.style.opacity = '1';
+                scrollBtn.style.pointerEvents = 'auto';
+                scrollBtn.style.transform = 'translateY(0)';
+            } else {
+                scrollBtn.style.opacity = '0';
+                scrollBtn.style.pointerEvents = 'none';
+                scrollBtn.style.transform = 'translateY(1rem)';
+            }
+        });
+        document.getElementById('scroll-top').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Animated counters
+        var counters = document.querySelectorAll('[data-counter]');
+        var counterObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    var el = entry.target;
+                    var target = parseInt(el.getAttribute('data-counter'));
+                    var duration = 2000;
+                    var step = target / (duration / 16);
+                    var current = 0;
+                    var timer = setInterval(function() {
+                        current += step;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        el.textContent = Math.floor(current).toLocaleString() + '+';
+                    }, 16);
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(function(c) { counterObserver.observe(c); });
+    </script>
+</body>
+</html>

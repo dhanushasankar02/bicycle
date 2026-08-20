@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycling Accessories - Bicycle Shop & Accessories Store</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Shop premium cycling accessories including helmets, lights, gloves, locks, bottles, and more at CycleHub.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#F8F9FA] font-['Inter',sans-serif]">
+
+    <!-- ==================== LOADING SCREEN ==================== -->
+    <div id="loading-screen">
+        <div class="loader-ring"></div>
+        <p class="loader-text">Loading Accessories...</p>
+    </div>
+
+    <!-- ==================== NAVBAR CONTAINER ==================== -->
+    <div id="navbar-container"></div>
+
+    <!-- ==================== PAGE HEADER ==================== -->
+    <section class="page-header">
+        <div class="container mx-auto px-4">
+            <div class="content">
+                <nav class="breadcrumb mb-4">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <span class="sep"><i class="fas fa-chevron-right"></i></span>
+                    <span class="current">Accessories</span>
+                </nav>
+                <h1 class="text-white">Cycling Accessories</h1>
+                <p class="text-lg text-white/60 max-w-xl mx-auto mt-3">Premium gear for every ride — from essentials to upgrades.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ACCESSORIES PRODUCT GRID ==================== -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center mb-14">
+            <span class="text-[#E53935] font-semibold text-sm uppercase tracking-widest">Gear Up</span>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Our Top Accessories</h2>
+            <p class="text-gray-500 text-lg max-w-2xl mx-auto">Everything you need for a safer, more comfortable ride</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Product 1: Premium Cycling Helmet -->
+            <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                    <img src="images/accessories1.jpg" alt="Premium Cycling Helmet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <span class="badge absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">New</span>
+                    <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                    </div>
+                </div>
+                <div class="info p-5">
+                    <span class="text-xs font-semibold text-[#E53935] uppercase tracking-wider">Giro</span>
+                    <h3 class="font-bold text-gray-900 mt-1 mb-1 group-hover:text-[#E53935] transition-colors">Premium Cycling Helmet</h3>
+                    <p class="text-gray-500 text-sm mb-3">Lightweight ventilated helmet with MIPS protection</p>
+                    <div class="flex items-center gap-1 mb-3">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs">(4.5)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="font-bold text-xl text-gray-900">&#8377;999</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">&#8377;1,499</span>
+                        </div>
+                    </div>
+                    <a href="#" class="block w-full text-center bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                        <i class="fas fa-shopping-cart mr-2"></i>Buy Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 2: High-Visibility LED Light -->
+            <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                    <img src="images/accessories2.jpg" alt="High-Visibility LED Light" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <span class="badge absolute top-3 left-3 bg-[#E53935] text-white text-xs font-bold px-3 py-1 rounded-full">Sale</span>
+                    <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                    </div>
+                </div>
+                <div class="info p-5">
+                    <span class="text-xs font-semibold text-[#E53935] uppercase tracking-wider">CatEye</span>
+                    <h3 class="font-bold text-gray-900 mt-1 mb-1 group-hover:text-[#E53935] transition-colors">High-Visibility LED Light</h3>
+                    <p class="text-gray-500 text-sm mb-3">1200 lumen rechargeable front light for night riding</p>
+                    <div class="flex items-center gap-1 mb-3">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs">(4.0)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="font-bold text-xl text-gray-900">&#8377;399</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">&#8377;599</span>
+                        </div>
+                    </div>
+                    <a href="#" class="block w-full text-center bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                        <i class="fas fa-shopping-cart mr-2"></i>Buy Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 3: Pro Cycling Gloves -->
+            <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                    <img src="images/accessories3.jpg" alt="Pro Cycling Gloves" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <span class="badge absolute top-3 left-3 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">Best Seller</span>
+                    <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                    </div>
+                </div>
+                <div class="info p-5">
+                    <span class="text-xs font-semibold text-[#E53935] uppercase tracking-wider">Fox Racing</span>
+                    <h3 class="font-bold text-gray-900 mt-1 mb-1 group-hover:text-[#E53935] transition-colors">Pro Cycling Gloves</h3>
+                    <p class="text-gray-500 text-sm mb-3">Gel-padded full-finger gloves with anti-slip grip</p>
+                    <div class="flex items-center gap-1 mb-3">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs">(5.0)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="font-bold text-xl text-gray-900">&#8377;499</span>
+                        </div>
+                    </div>
+                    <a href="#" class="block w-full text-center bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                        <i class="fas fa-shopping-cart mr-2"></i>Buy Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 4: Heavy-Duty Bike Lock -->
+            <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                    <img src="images/accessories4.jpg" alt="Heavy-Duty Bike Lock" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <span class="badge absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">New</span>
+                    <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                    </div>
+                </div>
+                <div class="info p-5">
+                    <span class="text-xs font-semibold text-[#E53935] uppercase tracking-wider">ABUS</span>
+                    <h3 class="font-bold text-gray-900 mt-1 mb-1 group-hover:text-[#E53935] transition-colors">Heavy-Duty Bike Lock</h3>
+                    <p class="text-gray-500 text-sm mb-3">U-lock with hardened steel shackle and anti-theft design</p>
+                    <div class="flex items-center gap-1 mb-3">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs">(4.6)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="font-bold text-xl text-gray-900">&#8377;799</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">&#8377;1,099</span>
+                        </div>
+                    </div>
+                    <a href="#" class="block w-full text-center bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                        <i class="fas fa-shopping-cart mr-2"></i>Buy Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 5: Insulated Water Bottle -->
+            <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                    <img src="images/accessories5.jpg" alt="Insulated Water Bottle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <span class="badge absolute top-3 left-3 bg-[#E53935] text-white text-xs font-bold px-3 py-1 rounded-full">Sale</span>
+                    <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                    </div>
+                </div>
+                <div class="info p-5">
+                    <span class="text-xs font-semibold text-[#E53935] uppercase tracking-wider">Shimano</span>
+                    <h3 class="font-bold text-gray-900 mt-1 mb-1 group-hover:text-[#E53935] transition-colors">Insulated Water Bottle</h3>
+                    <p class="text-gray-500 text-sm mb-3">BPA-free 750ml bottle keeps drinks cold for 12 hours</p>
+                    <div class="flex items-center gap-1 mb-3">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs">(4.9)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="font-bold text-xl text-gray-900">&#8377;299</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">&#8377;449</span>
+                        </div>
+                    </div>
+                    <a href="#" class="block w-full text-center bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                        <i class="fas fa-shopping-cart mr-2"></i>Buy Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 6: Complete Repair Tool Kit -->
+            <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                    <img src="images/accessories6.jpg" alt="Complete Repair Tool Kit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <span class="badge absolute top-3 left-3 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">Best Seller</span>
+                    <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                    </div>
+                </div>
+                <div class="info p-5">
+                    <span class="text-xs font-semibold text-[#E53935] uppercase tracking-wider">Topeak</span>
+                    <h3 class="font-bold text-gray-900 mt-1 mb-1 group-hover:text-[#E53935] transition-colors">Complete Repair Tool Kit</h3>
+                    <p class="text-gray-500 text-sm mb-3">16-piece multitool set with carry case for roadside repairs</p>
+                    <div class="flex items-center gap-1 mb-3">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs">(4.7)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="font-bold text-xl text-gray-900">&#8377;899</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">&#8377;1,299</span>
+                        </div>
+                    </div>
+                    <a href="#" class="block w-full text-center bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                        <i class="fas fa-shopping-cart mr-2"></i>Buy Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 7: Floor Bicycle Pump -->
+            <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                    <img src="images/accessories7.jpg" alt="Floor Bicycle Pump" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <span class="badge absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">New</span>
+                    <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                    </div>
+                </div>
+                <div class="info p-5">
+                    <span class="text-xs font-semibold text-[#E53935] uppercase tracking-wider">Topeak</span>
+                    <h3 class="font-bold text-gray-900 mt-1 mb-1 group-hover:text-[#E53935] transition-colors">Floor Bicycle Pump</h3>
+                    <p class="text-gray-500 text-sm mb-3">High-pressure pump with accurate gauge and auto-head</p>
+                    <div class="flex items-center gap-1 mb-3">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs">(4.2)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="font-bold text-xl text-gray-900">&#8377;599</span>
+                        </div>
+                    </div>
+                    <a href="#" class="block w-full text-center bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                        <i class="fas fa-shopping-cart mr-2"></i>Buy Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 8: Ergonomic Bike Saddle -->
+            <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                    <img src="images/accessories8.jpg" alt="Ergonomic Bike Saddle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <span class="badge absolute top-3 left-3 bg-[#E53935] text-white text-xs font-bold px-3 py-1 rounded-full">Sale</span>
+                    <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                    </div>
+                </div>
+                <div class="info p-5">
+                    <span class="text-xs font-semibold text-[#E53935] uppercase tracking-wider">Bell</span>
+                    <h3 class="font-bold text-gray-900 mt-1 mb-1 group-hover:text-[#E53935] transition-colors">Ergonomic Bike Saddle</h3>
+                    <p class="text-gray-500 text-sm mb-3">Memory foam saddle with relief channel for long rides</p>
+                    <div class="flex items-center gap-1 mb-3">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs">(4.5)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="font-bold text-xl text-gray-900">&#8377;1,299</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">&#8377;1,799</span>
+                        </div>
+                    </div>
+                    <a href="#" class="block w-full text-center bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                        <i class="fas fa-shopping-cart mr-2"></i>Buy Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 9: Performance Cycling Jersey -->
+            <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                    <img src="images/accessories9.jpg" alt="Performance Cycling Jersey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <span class="badge absolute top-3 left-3 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">Best Seller</span>
+                    <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                        <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                    </div>
+                </div>
+                <div class="info p-5">
+                    <span class="text-xs font-semibold text-[#E53935] uppercase tracking-wider">Giant</span>
+                    <h3 class="font-bold text-gray-900 mt-1 mb-1 group-hover:text-[#E53935] transition-colors">Performance Cycling Jersey</h3>
+                    <p class="text-gray-500 text-sm mb-3">Moisture-wicking 3-pocket jersey with full-zip design</p>
+                    <div class="flex items-center gap-1 mb-3">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs">(4.8)</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="font-bold text-xl text-gray-900">&#8377;1,499</span>
+                        </div>
+                    </div>
+                    <a href="#" class="block w-full text-center bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                        <i class="fas fa-shopping-cart mr-2"></i>Buy Now
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="relative py-20 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=1920&q=80" alt="Cycling Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/60"></div>
+        </div>
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#E53935] rounded-full blur-[150px]"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#FF6F61] rounded-full blur-[150px]"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mx-auto text-center">
+                <span class="inline-block px-5 py-2 bg-[#E53935]/20 border border-[#E53935]/30 text-[#FF6F61] text-sm font-bold rounded-full mb-6 tracking-wider uppercase">Limited Time Offer</span>
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-5 leading-tight">Gear Up for Your Next <span class="text-[#E53935]">Adventure</span></h2>
+                <p class="text-gray-300 text-lg mb-10 leading-relaxed max-w-xl mx-auto">Explore our premium collection of cycling accessories. From helmets to tool kits, everything you need to ride with confidence and style.</p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="accessories.html" class="inline-flex items-center gap-2 px-8 py-4 bg-[#E53935] hover:bg-[#C62828] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                        <i class="fas fa-shopping-bag"></i> Shop Now
+                    </a>
+                    <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-bold rounded-xl transition-all duration-300 hover:bg-white hover:text-[#121212] hover:border-white">
+                        <i class="fas fa-headset"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER CONTAINER ==================== -->
+    <div id="footer-container"></div>
+
+    <!-- ==================== SCROLL TO TOP ==================== -->
+    <button id="scroll-top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Loading screen
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const ls = document.getElementById('loading-screen');
+                if (ls) ls.classList.add('hidden');
+            }, 600);
+        });
+
+        // Scroll to top
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>

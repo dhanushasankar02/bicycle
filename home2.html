@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CycleHub - India's Premium Bicycle Store | Alternate Homepage</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="India's premium bicycle store offering top brands like Trek, Giant, Hero, and more. Shop bicycles, accessories, and expert repair services.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .hero-slide { display: none; opacity: 0; transition: opacity 0.8s ease; align-items: center; justify-content: center; text-align: center; }
+        .hero-slide.active { display: flex; opacity: 1; align-items: center; justify-content: center; text-align: center; }
+        .dot-btn.active { background-color: #E53935 !important; transform: scale(1.3); }
+        .hero-slide .bg-img { transition: transform 8s ease; }
+        .hero-slide.active .bg-img { transform: scale(1.05); }
+        .countdown-box { background: #1a1a2e; color: white; border-radius: 0.75rem; padding: 1rem 1.25rem; min-width: 80px; text-align: center; }
+        .countdown-box .num { font-size: 2rem; font-weight: 900; line-height: 1; display: block; color: #E53935; }
+        .countdown-box .lbl { font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.5); margin-top: 0.25rem; display: block; }
+        @keyframes slideInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .hero-slide.active .animate-slide-up { animation: slideInUp 0.7s ease forwards; }
+        .hero-slide.active .animate-slide-up2 { animation: slideInUp 0.7s ease 0.15s forwards; opacity: 0; }
+        .hero-slide.active .animate-slide-up3 { animation: slideInUp 0.7s ease 0.3s forwards; opacity: 0; }
+        .hero-slide.active .animate-slide-up4 { animation: slideInUp 0.7s ease 0.45s forwards; opacity: 0; }
+    </style>
+</head>
+<body class="bg-[#F8F9FA] font-['Inter',sans-serif]">
+
+    <!-- ==================== LOADING SCREEN ==================== -->
+    <div id="loading-screen" class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#121212]">
+        <div class="text-center">
+            <div class="mb-6">
+                <i class="fas fa-bicycle text-[#E53935] text-5xl animate-spin-slow"></i>
+            </div>
+            <div class="flex gap-1 justify-center mb-4">
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0s;"></span>
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0.1s;"></span>
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0.2s;"></span>
+            </div>
+            <p class="text-white text-sm tracking-widest uppercase">Loading CycleHub</p>
+        </div>
+    </div>
+
+    <!-- ==================== NAVBAR CONTAINER ==================== -->
+    <div id="navbar-container"></div>
+
+    <!-- ==================== HERO SLIDER ==================== -->
+    <section id="hero-slider" class="relative w-full overflow-hidden flex items-center justify-center" style="min-height: 100vh;">
+
+        <!-- Slide 1: Mountain Bikes -->
+        <div class="hero-slide active absolute inset-0 flex items-center justify-center text-center bg-[#0B1622]">
+            <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=1920&q=80" alt="Premium Mountain Bikes" class="bg-img absolute inset-0 w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/40"></div>
+            <div class="relative z-10 max-w-7xl mx-auto px-6 sm:px-16 md:px-24 lg:px-28 py-20 w-full flex flex-col items-center justify-center text-center">
+                <div class="max-w-3xl mx-auto flex flex-col items-center justify-center text-center">
+                    <span class="inline-block animate-slide-up bg-[#E53935] text-white text-sm font-semibold px-5 py-2 rounded-full mb-6 tracking-wide shadow-lg mx-auto text-center">
+                        <i class="fas fa-star mr-2"></i>New Collection 2026
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 animate-slide-up2 text-center mx-auto">
+                        Premium
+                        <br>
+                        <span class="text-[#E53935]">Mountain Bikes</span>
+                    </h1>
+                    <p class="text-base sm:text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-xl mx-auto animate-slide-up3 text-center">
+                        Conquer every trail with our handpicked range of high-performance mountain bikes.
+                        Built tough for India's diverse terrains.
+                    </p>
+                    <div class="flex flex-wrap justify-center items-center gap-4 animate-slide-up4 mx-auto text-center">
+                        <a href="products.html" class="inline-flex items-center justify-center gap-2 bg-[#E53935] hover:bg-[#C62828] text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                            <i class="fas fa-shopping-bag"></i>
+                            Shop Mountain Bikes
+                        </a>
+                        <a href="category-mountain.html" class="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-white hover:text-black">
+                            <i class="fas fa-bicycle"></i>
+                            Explore Collection
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Road Racing -->
+        <div class="hero-slide absolute inset-0 flex items-center justify-center text-center bg-[#0B1622]">
+            <img src="https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?w=1920&q=80" alt="Road Racing Collection" class="bg-img absolute inset-0 w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/40"></div>
+            <div class="relative z-10 max-w-7xl mx-auto px-6 sm:px-16 md:px-24 lg:px-28 py-20 w-full flex flex-col items-center justify-center text-center">
+                <div class="max-w-3xl mx-auto flex flex-col items-center justify-center text-center">
+                    <span class="inline-block animate-slide-up bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-semibold px-5 py-2 rounded-full mb-6 tracking-wide mx-auto text-center">
+                        <i class="fas fa-tachometer-alt mr-2"></i>Race Ready
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 animate-slide-up2 text-center mx-auto">
+                        Road Racing
+                        <br>
+                        <span class="text-[#FF6F61]">Collection</span>
+                    </h1>
+                    <p class="text-base sm:text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-xl mx-auto animate-slide-up3 text-center">
+                        Aerodynamic frames, precision engineering, and lightweight carbon builds.
+                        Dominate the road with speed and style.
+                    </p>
+                    <div class="flex flex-wrap justify-center items-center gap-4 animate-slide-up4 mx-auto text-center">
+                        <a href="products.html" class="inline-flex items-center justify-center gap-2 bg-[#E53935] hover:bg-[#C62828] text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                            <i class="fas fa-shopping-bag"></i>
+                            Shop Road Bikes
+                        </a>
+                        <a href="category-road.html" class="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-white hover:text-black">
+                            <i class="fas fa-flag-checkered"></i>
+                            View Catalog
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Electric Bikes -->
+        <div class="hero-slide absolute inset-0 flex items-center justify-center text-center bg-[#0B1622]">
+            <img src="https://images.unsplash.com/photo-1571188654248-7a89213915f7?w=1920&q=80" alt="Electric Bikes" class="bg-img absolute inset-0 w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/40"></div>
+            <div class="relative z-10 max-w-7xl mx-auto px-6 sm:px-16 md:px-24 lg:px-28 py-20 w-full flex flex-col items-center justify-center text-center">
+                <div class="max-w-3xl mx-auto flex flex-col items-center justify-center text-center">
+                    <span class="inline-block animate-slide-up bg-[#FF6F61] text-white text-sm font-semibold px-5 py-2 rounded-full mb-6 tracking-wide shadow-lg mx-auto text-center">
+                        <i class="fas fa-bolt mr-2"></i>Future of Riding
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 animate-slide-up2 text-center mx-auto">
+                        Electric
+                        <br>
+                        <span class="text-[#FF6F61]">Bikes</span>
+                    </h1>
+                    <p class="text-base sm:text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-xl mx-auto animate-slide-up3 text-center">
+                        Zero emissions, maximum thrills. Experience the future of urban commuting
+                        with our premium e-bike range.
+                    </p>
+                    <div class="flex flex-wrap justify-center items-center gap-4 animate-slide-up4 mx-auto text-center">
+                        <a href="products.html" class="inline-flex items-center justify-center gap-2 bg-[#E53935] hover:bg-[#C62828] text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                            <i class="fas fa-shopping-bag"></i>
+                            Shop E-Bikes
+                        </a>
+                        <a href="category-electric.html" class="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-white hover:text-black">
+                            <i class="fas fa-leaf"></i>
+                            Calculate Savings
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Navigation (Tablet & Desktop Side Arrows) -->
+        <button onclick="changeSlide(-1)" class="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full items-center justify-center hover:bg-white/25 hover:scale-105 transition-all duration-300 z-30" aria-label="Previous Slide">
+            <i class="fas fa-chevron-left text-base"></i>
+        </button>
+        <button onclick="changeSlide(1)" class="hidden md:flex absolute right-4 lg:left-auto lg:right-8 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full items-center justify-center hover:bg-white/25 hover:scale-105 transition-all duration-300 z-30" aria-label="Next Slide">
+            <i class="fas fa-chevron-right text-base"></i>
+        </button>
+
+        <!-- Slider Controls Bar (Unified for Mobile & Desktop Bottom Bar) -->
+        <div class="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3 z-30 bg-black/40 backdrop-blur-md px-4 py-2 rounded-full border border-white/15">
+            <button onclick="changeSlide(-1)" class="md:hidden w-8 h-8 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/20 transition" aria-label="Previous Slide">
+                <i class="fas fa-chevron-left text-xs"></i>
+            </button>
+            <div class="flex items-center gap-2.5 px-1">
+                <button onclick="goToSlide(0)" class="dot-btn active w-3 h-3 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" aria-label="Slide 1"></button>
+                <button onclick="goToSlide(1)" class="dot-btn w-3 h-3 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" aria-label="Slide 2"></button>
+                <button onclick="goToSlide(2)" class="dot-btn w-3 h-3 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" aria-label="Slide 3"></button>
+            </div>
+            <button onclick="changeSlide(1)" class="md:hidden w-8 h-8 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/20 transition" aria-label="Next Slide">
+                <i class="fas fa-chevron-right text-xs"></i>
+            </button>
+        </div>
+
+        <!-- Slide Counter -->
+        <div class="absolute top-8 right-8 z-30 bg-black/30 backdrop-blur-md border border-white/10 text-white px-4 py-2 rounded-full text-sm font-semibold">
+            <span id="slide-current">01</span> / <span class="text-white/50">03</span>
+        </div>
+    </section>
+
+    <!-- ==================== PREMIUM SERVICES ==================== -->
+    <section class="section py-20 bg-[#F8F9FA]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title text-[#E53935] font-semibold text-sm uppercase tracking-widest">Everything You Need</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Premium Services</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">From expert repairs to custom builds — we keep you rolling with top-tier support</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group bg-white rounded-2xl p-8 text-center border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-[#E53935]/10 flex items-center justify-center mb-5 group-hover:bg-[#E53935] transition-colors duration-500">
+                        <i class="fas fa-wrench text-2xl text-[#E53935] group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Expert Repairs</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-5">Full-service repairs by certified mechanics. From tune-ups to overhauls, we handle all makes and models.</p>
+                    <a href="services.html" class="inline-flex items-center gap-1 text-[#E53935] font-semibold text-sm hover:gap-2 transition-all">
+                        Book Now <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+                <div class="group bg-white rounded-2xl p-8 text-center border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-[#E53935]/10 flex items-center justify-center mb-5 group-hover:bg-[#E53935] transition-colors duration-500">
+                        <i class="fas fa-tools text-2xl text-[#E53935] group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Custom Builds</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-5">Dream bike brought to life. Choose frames, components, and finishes for a ride that's uniquely yours.</p>
+                    <a href="services.html" class="inline-flex items-center gap-1 text-[#E53935] font-semibold text-sm hover:gap-2 transition-all">
+                        Build Yours <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+                <div class="group bg-white rounded-2xl p-8 text-center border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-[#E53935]/10 flex items-center justify-center mb-5 group-hover:bg-[#E53935] transition-colors duration-500">
+                        <i class="fas fa-ruler-combined text-2xl text-[#E53935] group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Bike Fitting</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-5">Precision bike fitting for maximum comfort and performance. Reduce fatigue and ride longer with confidence.</p>
+                    <a href="services.html" class="inline-flex items-center gap-1 text-[#E53935] font-semibold text-sm hover:gap-2 transition-all">
+                        Learn More <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+                <div class="group bg-white rounded-2xl p-8 text-center border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-[#E53935]/10 flex items-center justify-center mb-5 group-hover:bg-[#E53935] transition-colors duration-500">
+                        <i class="fas fa-bicycle text-2xl text-[#E53935] group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Test Rides</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-5">Try before you buy. Visit our store for an extended test ride on any model — no pressure, just pure riding.</p>
+                    <a href="contact.html" class="inline-flex items-center gap-1 text-[#E53935] font-semibold text-sm hover:gap-2 transition-all">
+                        Schedule Now <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TRUSTED BRANDS ==================== -->
+    <section class="section py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title text-[#E53935] font-semibold text-sm uppercase tracking-widest">World-Class Manufacturers</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Trusted Brands</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">We partner with the world's leading bicycle brands to bring you uncompromising quality</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <div class="flex items-center gap-5 mb-5">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#E53935]/20 to-[#E53935]/5 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-mountain text-2xl text-[#E53935]"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Trek</h3>
+                            <span class="text-xs text-gray-400 font-medium">USA — Since 1976</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-5">American engineering at its finest. From the rugged Marlin series to the carbon-fibre Madone, Trek sets the benchmark for performance and innovation.</p>
+                    <a href="category-mountain.html" class="inline-flex items-center gap-2 text-[#E53935] font-semibold text-sm hover:gap-3 transition-all">
+                        Explore Trek <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+                <div class="group bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <div class="flex items-center gap-5 mb-5">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-500/5 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-tachometer-alt text-2xl text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Giant</h3>
+                            <span class="text-xs text-gray-400 font-medium">Taiwan — Since 1972</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-5">World's largest bicycle manufacturer. Giant combines cutting-edge technology with unmatched value across road, mountain, and urban categories.</p>
+                    <a href="category-road.html" class="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm hover:gap-3 transition-all">
+                        Explore Giant <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+                <div class="group bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <div class="flex items-center gap-5 mb-5">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500/20 to-green-500/5 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-bolt text-2xl text-green-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Hero</h3>
+                            <span class="text-xs text-gray-400 font-medium">India — Since 1956</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-5">India's cycling champion. Hero offers reliable, affordable, and innovative bikes for every age and terrain — from the Sprint to the Lectro e-bike series.</p>
+                    <a href="category-hybrid.html" class="inline-flex items-center gap-2 text-green-600 font-semibold text-sm hover:gap-3 transition-all">
+                        Explore Hero <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+                <div class="group bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <div class="flex items-center gap-5 mb-5">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-500/5 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-medal text-2xl text-purple-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Scott</h3>
+                            <span class="text-xs text-gray-400 font-medium">Switzerland — Since 1958</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-5">Swiss precision and innovation. Scott's high-performance road and mountain bikes are engineered for competitive riders who demand the best.</p>
+                    <a href="category-mountain.html" class="inline-flex items-center gap-2 text-purple-600 font-semibold text-sm hover:gap-3 transition-all">
+                        Explore Scott <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+                <div class="group bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <div class="flex items-center gap-5 mb-5">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500/20 to-amber-500/5 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-flag-checkered text-2xl text-amber-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Cannondale</h3>
+                            <span class="text-xs text-gray-400 font-medium">USA — Since 1971</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-5">Pioneers of aluminium frame technology. Cannondale delivers bold design and industry-first innovations that push the boundaries of cycling.</p>
+                    <a href="category-road.html" class="inline-flex items-center gap-2 text-amber-600 font-semibold text-sm hover:gap-3 transition-all">
+                        Explore Cannondale <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+                <div class="group bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                    <div class="flex items-center gap-5 mb-5">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-teal-500/20 to-teal-500/5 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-crown text-2xl text-teal-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Montra</h3>
+                            <span class="text-xs text-gray-400 font-medium">India — Since 2014</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-5">Modern Indian cycling redefined. Montra blends contemporary design with robust build quality to create stylish and durable bikes for the urban rider.</p>
+                    <a href="accessories.html" class="inline-flex items-center gap-2 text-teal-600 font-semibold text-sm hover:gap-3 transition-all">
+                        Explore Montra <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-14">
+                <a href="products.html" class="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-10 py-4 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-lg">
+                    <i class="fas fa-store"></i> Browse All Brands
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SPECIAL OFFER BANNER ==================== -->
+    <section class="py-20 bg-[#121212] relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-[#E53935] rounded-full blur-[150px]"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#FF6F61] rounded-full blur-[150px]"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-gradient-to-r from-[#1a1a2e] to-[#16213e] rounded-3xl overflow-hidden shadow-2xl">
+                <div class="grid lg:grid-cols-2 gap-0">
+                    <!-- Left: Product Image -->
+                    <div class="flex items-center justify-center p-10 min-h-[400px] relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#E53935]/20 to-transparent"></div>
+                        <div class="text-center relative z-10">
+                            <img src="https://images.unsplash.com/photo-1571188654248-7a89213915f7?w=700&q=85" alt="Trek Marlin 7 Mountain Bike" class="w-72 h-72 mx-auto rounded-2xl object-cover shadow-2xl border-2 border-[#E53935]/30">
+                            <span class="inline-block px-5 py-2 bg-[#E53935] text-white text-sm font-bold rounded-full shadow-lg mt-4">-40% OFF</span>
+                        </div>
+                    </div>
+                    <!-- Right: Content -->
+                    <div class="p-8 lg:p-12 flex flex-col items-center justify-center text-center text-white">
+                        <span class="text-[#FF6F61] font-semibold text-sm uppercase tracking-wider mb-3">Limited Time Offer</span>
+                        <h3 class="text-3xl md:text-4xl font-black text-white mb-3 text-center">Trek Marlin 7 Mountain Bike</h3>
+                        <p class="text-gray-300 mb-6 leading-relaxed text-center max-w-lg">A high-performance hardtail mountain bike with hydraulic disc brakes, 29-inch wheels, and a lightweight Alpha Silver aluminium frame.</p>
+                        <div class="flex items-baseline justify-center gap-4 mb-6 flex-wrap">
+                            <span class="text-4xl font-black text-[#E53935]">₹89,999</span>
+                            <span class="text-xl text-gray-400 line-through">₹1,49,999</span>
+                            <span class="px-3 py-1 bg-green-500/20 text-green-400 text-sm font-bold rounded-full">Save ₹60,000</span>
+                        </div>
+                        <!-- Countdown Timer -->
+                        <div class="mb-8 flex flex-col items-center">
+                            <p class="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider text-center">Offer Ends In</p>
+                            <div class="flex gap-3 flex-wrap justify-center">
+                                <div class="countdown-box">
+                                    <span id="cd-days" class="num">08</span>
+                                    <span class="lbl">Days</span>
+                                </div>
+                                <div class="countdown-box">
+                                    <span id="cd-hours" class="num">14</span>
+                                    <span class="lbl">Hours</span>
+                                </div>
+                                <div class="countdown-box">
+                                    <span id="cd-minutes" class="num">32</span>
+                                    <span class="lbl">Mins</span>
+                                </div>
+                                <div class="countdown-box">
+                                    <span id="cd-seconds" class="num">07</span>
+                                    <span class="lbl">Secs</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 flex-wrap justify-center">
+                            <button class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#E53935] text-white font-bold rounded-xl hover:bg-[#C62828] transition-all duration-300 shadow-lg hover:shadow-xl">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white hover:text-[#121212] transition-all duration-300">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="section py-20 bg-[#F8F9FA]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title text-[#E53935] font-semibold text-sm uppercase tracking-widest">What Riders Say</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Customer Testimonials</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Real reviews from real cyclists who trust CycleHub for their rides</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white rounded-2xl border border-gray-100 p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+                    <div class="text-[#E53935]/15 text-5xl mb-4"><i class="fas fa-quote-left"></i></div>
+                    <div class="flex text-amber-400 text-sm mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-500 leading-relaxed mb-6 italic">"Absolutely thrilled with my Trek Marlin 7!  outstanding and the team at CycleHub helped me pick the perfect bike for my weekend trails. Delivery was quick and the assembly was flawless."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#E53935] to-[#FF6F61] flex items-center justify-center text-white font-bold text-lg">R</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Rajesh Kumar</h4>
+                            <p class="text-gray-400 text-sm">Mountain Biking Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white rounded-2xl border border-gray-100 p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+                    <div class="text-[#E53935]/15 text-5xl mb-4"><i class="fas fa-quote-left"></i></div>
+                    <div class="flex text-amber-400 text-sm mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-500 leading-relaxed mb-6 italic">"I've been buying from CycleHub for 5 years now. Their selection of road bikes is unmatched in India. The Giant TCR Advanced I purchased last month is a beast on the highway. "</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white font-bold text-lg">P</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Priya Sharma</h4>
+                            <p class="text-gray-400 text-sm">Road Cycling Pro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white rounded-2xl border border-gray-100 p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+                    <div class="text-[#E53935]/15 text-5xl mb-4"><i class="fas fa-quote-left"></i></div>
+                    <div class="flex text-amber-400 text-sm mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-500 leading-relaxed mb-6 italic">"Best cycling store experience! The staff knows their stuff inside out. They helped me find the perfect e-bike for my daily commute. The Hero Lectro has been a game-changer for my 20km daily ride."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center text-white font-bold text-lg">A</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Amit Patel</h4>
+                            <p class="text-gray-400 text-sm">Urban Commuter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEWSLETTER ==================== -->
+    <section class="newsletter-section py-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-2xl mx-auto">
+                <div class="w-20 h-20 mx-auto rounded-full bg-[#E53935]/20 flex items-center justify-center mb-6">
+                    <i class="fas fa-envelope text-[#E53935] text-3xl"></i>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mt-3 mb-4">Stay in the Loop</h2>
+                <p class="text-gray-400 text-lg mb-10 leading-relaxed">Subscribe to our newsletter for exclusive deals, new arrivals, cycling tips, and the latest from CycleHub delivered straight to your inbox.</p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                    <input type="email" placeholder="Enter your email address" class="newsletter-input flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 outline-none text-sm font-medium transition-all duration-300 focus:bg-white/15">
+                    <button type="submit" class="px-8 py-4 bg-[#E53935] hover:bg-[#C62828] text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap">
+                        <i class="fas fa-paper-plane mr-2"></i>Subscribe
+                    </button>
+                </form>
+                <p class="text-gray-500 text-sm mt-4">No spam, ever. Unsubscribe anytime. Read our <a href="#" class="text-[#E53935] hover:underline">Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER CONTAINER ==================== -->
+    <div id="footer-container"></div>
+
+    <!-- ==================== SCROLL TO TOP ==================== -->
+    <button id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Loading Screen -->
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loading-screen');
+            setTimeout(function() {
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+                loader.style.pointerEvents = 'none';
+            }, 1500);
+        });
+    </script>
+
+    <!-- Hero Slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.dot-btn');
+        const counter = document.getElementById('slide-current');
+        const totalSlides = slides.length;
+        let autoSlideTimer;
+
+        function showSlide(index) {
+            slides.forEach(function(s) { s.classList.remove('active'); });
+            dots.forEach(function(d) { d.classList.remove('active'); });
+            currentSlide = (index + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+            counter.textContent = String(currentSlide + 1).padStart(2, '0');
+        }
+
+        function changeSlide(dir) {
+            showSlide(currentSlide + dir);
+            resetAutoSlide();
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+            resetAutoSlide();
+        }
+
+        function startAutoSlide() {
+            autoSlideTimer = setInterval(function() {
+                showSlide(currentSlide + 1);
+            }, 6000);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideTimer);
+            startAutoSlide();
+        }
+
+        startAutoSlide();
+    </script>
+
+    <!-- Countdown Timer -->
+    <script>
+        (function() {
+            var endDate = new Date();
+            endDate.setDate(endDate.getDate() + 8);
+            endDate.setHours(endDate.getHours() + 14);
+            endDate.setMinutes(endDate.getMinutes() + 32);
+
+            function updateCountdown() {
+                var now = new Date();
+                var diff = endDate - now;
+                if (diff <= 0) return;
+
+                var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                var dEl = document.getElementById('cd-days');
+                var hEl = document.getElementById('cd-hours');
+                var mEl = document.getElementById('cd-minutes');
+                var sEl = document.getElementById('cd-seconds');
+
+                if (dEl) dEl.textContent = String(days).padStart(2, '0');
+                if (hEl) hEl.textContent = String(hours).padStart(2, '0');
+                if (mEl) mEl.textContent = String(minutes).padStart(2, '0');
+                if (sEl) sEl.textContent = String(seconds).padStart(2, '0');
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        })();
+    </script>
+
+    <!-- Scroll to Top -->
+    <script>
+        var scrollBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 400) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Bicycle Shop</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .error-gradient {
+            background: linear-gradient(135deg, #E53935 0%, #FF6F61 50%, #E53935 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 4s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .float-animation {
+            animation: floatBike 3s ease-in-out infinite;
+        }
+
+        @keyframes floatBike {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+        }
+
+        .pulse-ring {
+            animation: pulseRing 2.5s ease-out infinite;
+        }
+
+        @keyframes pulseRing {
+            0% { transform: scale(0.8); opacity: 0.6; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+
+        .slide-up {
+            animation: slideUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .bg-overlay {
+            background: linear-gradient(135deg, rgba(248,249,250,0.95) 0%, rgba(241,243,245,0.92) 100%);
+        }
+
+        .dark .bg-overlay {
+            background: linear-gradient(135deg, rgba(11,22,34,0.92) 0%, rgba(11,22,34,0.85) 50%, rgba(11,22,34,0.92) 100%);
+        }
+
+        .loading-screen {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: #0B1622;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-[#F8F9FA] dark:bg-[#0B1622] text-gray-900 dark:text-white font-['Inter',sans-serif] min-h-screen transition-colors duration-300">
+
+    <!-- ==================== LOADING SCREEN ==================== -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="text-center">
+            <div class="mb-6">
+                <i class="fas fa-bicycle text-[#E53935] text-5xl animate-spin-slow"></i>
+            </div>
+            <div class="flex gap-1 justify-center mb-4">
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0s;"></span>
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0.1s;"></span>
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0.2s;"></span>
+            </div>
+            <p class="text-white/60 text-sm tracking-widest uppercase">Loading</p>
+        </div>
+    </div>
+
+    <!-- ==================== NAVBAR CONTAINER ==================== -->
+    <div id="navbar-container"></div>
+
+    <!-- ==================== MAIN 404 CONTENT ==================== -->
+    <main class="min-h-screen relative flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=1920&q=80" alt="Bicycle Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-overlay"></div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <div class="absolute top-32 left-10 text-gray-900/[0.03] dark:text-white/[0.03]">
+                <i class="fas fa-bicycle text-[200px]"></i>
+            </div>
+            <div class="absolute bottom-20 right-10 text-gray-900/[0.03] dark:text-white/[0.03]">
+                <i class="fas fa-cog text-[120px]"></i>
+            </div>
+            <div class="absolute top-1/3 right-1/4 text-gray-900/[0.02] dark:text-white/[0.02]">
+                <i class="fas fa-wrench text-[150px]"></i>
+            </div>
+        </div>
+
+        <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+            <!-- Animated Bicycle Icon -->
+            <div class="relative inline-block mb-8 float-animation">
+                <div class="w-32 h-32 md:w-40 md:h-40 bg-[#E53935]/10 dark:bg-[#E53935]/20 rounded-full flex items-center justify-center mx-auto relative">
+                    <div class="absolute inset-0 border-2 border-[#E53935]/30 rounded-full pulse-ring"></div>
+                    <i class="fas fa-bicycle text-[#E53935] text-5xl md:text-7xl"></i>
+                </div>
+            </div>
+
+            <!-- Error Code -->
+            <div class="mb-4">
+                <h1 class="text-[8rem] md:text-[12rem] font-black leading-none error-gradient select-none tracking-tight">
+                    404
+                </h1>
+            </div>
+
+            <!-- Subtitle -->
+            <h2 class="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 slide-up" style="animation-delay: 0.1s;">
+                Page Not Found
+            </h2>
+
+            <!-- Description -->
+            <p class="text-gray-600 dark:text-gray-400 text-base md:text-lg mb-10 max-w-xl mx-auto leading-relaxed slide-up" style="animation-delay: 0.2s;">
+                The page you're looking for might have been moved, removed, or is temporarily unavailable. 
+                Let's get you back on track.
+            </p>
+
+            <!-- Go Home Button -->
+            <div class="slide-up" style="animation-delay: 0.3s;">
+                <a href="index.html" class="inline-flex items-center gap-3 bg-[#E53935] hover:bg-[#C62828] text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg shadow-[#E53935]/30 hover:shadow-xl hover:shadow-[#E53935]/40 hover:-translate-y-0.5">
+                    <i class="fas fa-home"></i>
+                    Go Home
+                </a>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="flex flex-wrap items-center justify-center gap-4 mt-8 slide-up" style="animation-delay: 0.4s;">
+                <button onclick="window.history.back()" class="inline-flex items-center gap-2 border border-gray-300 dark:border-white/20 hover:border-[#E53935] text-gray-700 dark:text-white/70 hover:text-[#E53935] dark:hover:text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:bg-gray-100 dark:hover:bg-white/5">
+                    <i class="fas fa-arrow-left text-sm"></i>
+                    Go Back
+                </button>
+                <a href="accessories.html" class="inline-flex items-center gap-2 border border-gray-300 dark:border-white/20 hover:border-[#E53935] text-gray-700 dark:text-white/70 hover:text-[#E53935] dark:hover:text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:bg-gray-100 dark:hover:bg-white/5">
+                    <i class="fas fa-shopping-bag text-sm"></i>
+                    Accessories
+                </a>
+                <a href="contact.html" class="inline-flex items-center gap-2 border border-gray-300 dark:border-white/20 hover:border-[#E53935] text-gray-700 dark:text-white/70 hover:text-[#E53935] dark:hover:text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:bg-gray-100 dark:hover:bg-white/5">
+                    <i class="fas fa-headset text-sm"></i>
+                    Contact Support
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- ==================== FOOTER CONTAINER =================== -->
+    <div id="footer-container"></div>
+
+    <!-- ==================== SCROLL TO TOP ==================== -->
+    <button id="scroll-top" class="fixed bottom-6 right-6 w-12 h-12 bg-[#E53935] hover:bg-[#C62828] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50 opacity-0 pointer-events-none translate-y-4" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    
+    <script src="js/main.js"></script>
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            var loader = document.getElementById('loading-screen');
+            setTimeout(function() {
+                loader.classList.add('hidden');
+            }, 600);
+        });
+
+        // Scroll to top button
+        var scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                scrollTopBtn.style.opacity = '1';
+                scrollTopBtn.style.pointerEvents = 'auto';
+                scrollTopBtn.style.transform = 'translateY(0)';
+            } else {
+                scrollTopBtn.style.opacity = '0';
+                scrollTopBtn.style.pointerEvents = 'none';
+                scrollTopBtn.style.transform = 'translateY(1rem)';
+            }
+        });
+    </script>
+</body>
+</html>

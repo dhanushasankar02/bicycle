@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CycleHub - India's Premium Bicycle Store | Buy Bicycles & Accessories Online</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="India's premium bicycle store offering top brands like Trek, Giant, Hero, and more. Shop bicycles, accessories, and expert repair services.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#F8F9FA] font-['Inter',sans-serif]">
+
+    <!-- ==================== LOADING SCREEN ==================== -->
+    <div id="loading-screen" class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#0B1622]">
+        <div class="text-center">
+            <div class="mb-6">
+                <i class="fas fa-bicycle text-[#E53935] text-5xl animate-spin-slow"></i>
+            </div>
+            <div class="flex gap-1 justify-center mb-4">
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0s;"></span>
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0.1s;"></span>
+                <span class="w-2 h-2 bg-[#E53935] rounded-full animate-bounce" style="animation-delay: 0.2s;"></span>
+            </div>
+            <p class="text-white text-sm tracking-widest uppercase">Loading CycleHub</p>
+        </div>
+    </div>
+
+    <!-- ==================== NAVBAR CONTAINER ==================== -->
+    <div id="navbar-container"></div>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="images/home1-1.jpg" alt="Bicycle Showroom" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/40"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full flex flex-col items-center text-center">
+            <div class="max-w-3xl mx-auto flex flex-col items-center text-center">
+                
+                <h1 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6 text-center">
+                    Ride Into Your
+                    <br>
+                    <span class="text-[#E53935]">Next Adventure</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-xl mx-auto text-center">
+                    Discover India's finest collection of premium bicycles and accessories. 
+                    From rugged mountain bikes to sleek road racers, find the perfect ride that 
+                    matches your passion and elevates every journey.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mb-16">
+                    <a href="products.html" class="btn btn-primary btn-lg inline-flex items-center justify-center gap-2 bg-[#E53935] hover:bg-[#C62828] text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                        <i class="fas fa-shopping-bag"></i>
+                        Shop Now
+                    </a>
+                    <a href="bikes.html" class="btn btn-outline btn-lg inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-white hover:text-black">
+                        <i class="fas fa-bicycle"></i>
+                        Explore Bikes
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- ==================== FEATURED CATEGORIES ==================== -->
+    <section id="categories" class="section py-20 bg-[#F8F9FA]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title text-[#E53935] font-semibold text-sm uppercase tracking-widest">Browse Our Collection</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Featured Categories</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Find the perfect bicycle for every terrain and every rider</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Mountain Bikes -->
+                <a href="category-mountain.html" class="category-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="images/home1-2.jpg" alt="Mountain Bikes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-bold text-white">Mountain Bikes</h3>
+                            <p class="text-gray-300 text-sm mt-1">Conquer every trail</p>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-[#E53935] text-white text-xs font-bold px-3 py-1 rounded-full">45+ Models</span>
+                    </div>
+                </a>
+                <!-- Road Bikes -->
+                <a href="category-road.html" class="category-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="images/home1-3.jpg" alt="Road Bikes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-bold text-white">Road Bikes</h3>
+                            <p class="text-gray-300 text-sm mt-1">Speed meets comfort</p>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-[#FF6F61] text-white text-xs font-bold px-3 py-1 rounded-full">35+ Models</span>
+                    </div>
+                </a>
+                <!-- Hybrid Bikes -->
+                <a href="category-hybrid.html" class="category-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="images/home1-4.jpg" alt="Hybrid Bikes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-bold text-white">Hybrid Bikes</h3>
+                            <p class="text-gray-300 text-sm mt-1">Versatile everyday rides</p>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-[#E53935] text-white text-xs font-bold px-3 py-1 rounded-full">30+ Models</span>
+                    </div>
+                </a>
+                <!-- Electric Bikes -->
+                <a href="category-electric.html" class="category-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="images/home1-5.jpg" alt="Electric Bikes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-bold text-white">Electric Bikes</h3>
+                            <p class="text-gray-300 text-sm mt-1">Ride the future</p>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-[#FF6F61] text-white text-xs font-bold px-3 py-1 rounded-full">20+ Models</span>
+                    </div>
+                </a>
+                <!-- Kids Bikes -->
+                <a href="category-kids.html" class="category-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="images/home1-6.jpg" alt="Kids Bikes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-bold text-white">Kids Bikes</h3>
+                            <p class="text-gray-300 text-sm mt-1">Fun for the little ones</p>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-[#E53935] text-white text-xs font-bold px-3 py-1 rounded-full">25+ Models</span>
+                    </div>
+                </a>
+                <!-- Accessories -->
+                <a href="accessories.html" class="category-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="images/home1-7.jpg" alt="Accessories" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-bold text-white">Accessories</h3>
+                            <p class="text-gray-300 text-sm mt-1">Gear up for the ride</p>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-[#FF6F61] text-white text-xs font-bold px-3 py-1 rounded-full">100+ Items</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURED PRODUCTS ==================== -->
+    <section class="section py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title text-[#E53935] font-semibold text-sm uppercase tracking-widest">Our Best Sellers</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Featured Products</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Handpicked bicycles loved by thousands of riders across India</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1: Trek Marlin 7 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                    <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                        <img src="images/home1-8.jpg" alt="Trek Marlin 7" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="badge absolute top-3 left-3 bg-[#E53935] text-white text-xs font-bold px-3 py-1 rounded-full">Bestseller</span>
+                        <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                            <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                        </div>
+                    </div>
+                    <div class="info p-5">
+                        <span class="brand text-xs font-semibold text-[#E53935] uppercase tracking-wider">Trek</span>
+                        <h3 class="product-name font-bold text-gray-900 mt-1 mb-2 group-hover:text-[#E53935] transition-colors">Marlin 7</h3>
+                        <div class="rating flex items-center gap-1 mb-3">
+                            <div class="flex text-amber-400 text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-400 text-xs">(128)</span>
+                        </div>
+                        <div class="price-row flex items-center justify-between">
+                            <div>
+                                <span class="price font-bold text-xl text-gray-900">₹65,000</span>
+                                <span class="original-price text-gray-400 text-sm line-through ml-2">₹72,000</span>
+                            </div>
+                        </div>
+                        <button class="add-to-cart w-full mt-4 bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                            <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2: Giant Defy Advanced 2 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                    <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                        <img src="images/home1-9.jpg" alt="Giant Defy Advanced 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="badge absolute top-3 left-3 bg-[#FF6F61] text-white text-xs font-bold px-3 py-1 rounded-full">New</span>
+                        <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                            <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                        </div>
+                    </div>
+                    <div class="info p-5">
+                        <span class="brand text-xs font-semibold text-[#E53935] uppercase tracking-wider">Giant</span>
+                        <h3 class="product-name font-bold text-gray-900 mt-1 mb-2 group-hover:text-[#E53935] transition-colors">Defy Advanced 2</h3>
+                        <div class="rating flex items-center gap-1 mb-3">
+                            <div class="flex text-amber-400 text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-400 text-xs">(96)</span>
+                        </div>
+                        <div class="price-row flex items-center justify-between">
+                            <div>
+                                <span class="price font-bold text-xl text-gray-900">₹1,45,000</span>
+                                <span class="original-price text-gray-400 text-sm line-through ml-2">₹1,60,000</span>
+                            </div>
+                        </div>
+                        <button class="add-to-cart w-full mt-4 bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                            <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3: Hero Sprint Next 26T -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                    <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                        <img src="images/home1-10.jpg" alt="Hero Sprint Next 26T" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="badge absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">Budget Pick</span>
+                        <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                            <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                        </div>
+                    </div>
+                    <div class="info p-5">
+                        <span class="brand text-xs font-semibold text-[#E53935] uppercase tracking-wider">Hero</span>
+                        <h3 class="product-name font-bold text-gray-900 mt-1 mb-2 group-hover:text-[#E53935] transition-colors">Sprint Next 26T</h3>
+                        <div class="rating flex items-center gap-1 mb-3">
+                            <div class="flex text-amber-400 text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-400 text-xs">(243)</span>
+                        </div>
+                        <div class="price-row flex items-center justify-between">
+                            <div>
+                                <span class="price font-bold text-xl text-gray-900">₹8,999</span>
+                                <span class="original-price text-gray-400 text-sm line-through ml-2">₹11,500</span>
+                            </div>
+                        </div>
+                        <button class="add-to-cart w-full mt-4 bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                            <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4: Firefox Bad Attitude -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                    <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                        <img src="images/home1-11.jpg" alt="Firefox Bad Attitude" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                            <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                        </div>
+                    </div>
+                    <div class="info p-5">
+                        <span class="brand text-xs font-semibold text-[#E53935] uppercase tracking-wider">Firefox</span>
+                        <h3 class="product-name font-bold text-gray-900 mt-1 mb-2 group-hover:text-[#E53935] transition-colors">Bad Attitude 26</h3>
+                        <div class="rating flex items-center gap-1 mb-3">
+                            <div class="flex text-amber-400 text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-400 text-xs">(187)</span>
+                        </div>
+                        <div class="price-row flex items-center justify-between">
+                            <div>
+                                <span class="price font-bold text-xl text-gray-900">₹12,500</span>
+                                <span class="original-price text-gray-400 text-sm line-through ml-2">₹14,999</span>
+                            </div>
+                        </div>
+                        <button class="add-to-cart w-full mt-4 bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                            <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5: Montra Helios Disc -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                    <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                        <img src="images/home1-11.jpg" alt="Montra Helios Disc" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="badge absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">Popular</span>
+                        <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                            <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                        </div>
+                    </div>
+                    <div class="info p-5">
+                        <span class="brand text-xs font-semibold text-[#E53935] uppercase tracking-wider">Montra</span>
+                        <h3 class="product-name font-bold text-gray-900 mt-1 mb-2 group-hover:text-[#E53935] transition-colors">Helios Disc</h3>
+                        <div class="rating flex items-center gap-1 mb-3">
+                            <div class="flex text-amber-400 text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-400 text-xs">(215)</span>
+                        </div>
+                        <div class="price-row flex items-center justify-between">
+                            <div>
+                                <span class="price font-bold text-xl text-gray-900">₹28,000</span>
+                                <span class="original-price text-gray-400 text-sm line-through ml-2">₹32,000</span>
+                            </div>
+                        </div>
+                        <button class="add-to-cart w-full mt-4 bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                            <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6: Scott Scale 970 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                    <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                        <img src="images/home1-12.jpg" alt="Scott Scale 970" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="badge absolute top-3 left-3 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">Premium</span>
+                        <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                            <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                        </div>
+                    </div>
+                    <div class="info p-5">
+                        <span class="brand text-xs font-semibold text-[#E53935] uppercase tracking-wider">Scott</span>
+                        <h3 class="product-name font-bold text-gray-900 mt-1 mb-2 group-hover:text-[#E53935] transition-colors">Scale 970</h3>
+                        <div class="rating flex items-center gap-1 mb-3">
+                            <div class="flex text-amber-400 text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-400 text-xs">(72)</span>
+                        </div>
+                        <div class="price-row flex items-center justify-between">
+                            <div>
+                                <span class="price font-bold text-xl text-gray-900">₹1,85,000</span>
+                                <span class="original-price text-gray-400 text-sm line-through ml-2">₹2,10,000</span>
+                            </div>
+                        </div>
+                        <button class="add-to-cart w-full mt-4 bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                            <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 7: Cannondale Trail 5 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                    <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                        <img src="images/home1-13.jpg" alt="Cannondale Trail 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="badge absolute top-3 left-3 bg-[#E53935] text-white text-xs font-bold px-3 py-1 rounded-full">Top Rated</span>
+                        <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                            <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                        </div>
+                    </div>
+                    <div class="info p-5">
+                        <span class="brand text-xs font-semibold text-[#E53935] uppercase tracking-wider">Cannondale</span>
+                        <h3 class="product-name font-bold text-gray-900 mt-1 mb-2 group-hover:text-[#E53935] transition-colors">Trail 5</h3>
+                        <div class="rating flex items-center gap-1 mb-3">
+                            <div class="flex text-amber-400 text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-400 text-xs">(154)</span>
+                        </div>
+                        <div class="price-row flex items-center justify-between">
+                            <div>
+                                <span class="price font-bold text-xl text-gray-900">₹72,000</span>
+                                <span class="original-price text-gray-400 text-sm line-through ml-2">₹79,999</span>
+                            </div>
+                        </div>
+                        <button class="add-to-cart w-full mt-4 bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                            <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 8: Bianchi Oltre XR4 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                    <div class="img-wrap relative h-64 overflow-hidden bg-gray-50">
+                        <img src="images/home1-14.jpg" alt="Bianchi Oltre XR4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="badge absolute top-3 left-3 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">Flagship</span>
+                        <div class="quick-actions absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-heart text-sm"></i></button>
+                            <button class="w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-[#E53935] transition-colors"><i class="far fa-eye text-sm"></i></button>
+                        </div>
+                    </div>
+                    <div class="info p-5">
+                        <span class="brand text-xs font-semibold text-[#E53935] uppercase tracking-wider">Bianchi</span>
+                        <h3 class="product-name font-bold text-gray-900 mt-1 mb-2 group-hover:text-[#E53935] transition-colors">Oltre XR4</h3>
+                        <div class="rating flex items-center gap-1 mb-3">
+                            <div class="flex text-amber-400 text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-400 text-xs">(38)</span>
+                        </div>
+                        <div class="price-row flex items-center justify-between">
+                            <div>
+                                <span class="price font-bold text-xl text-gray-900">₹3,50,000</span>
+                            </div>
+                        </div>
+                        <button class="add-to-cart w-full mt-4 bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-2.5 rounded-xl transition-all duration-300 text-sm">
+                            <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="products.html" class="inline-flex items-center justify-center gap-2 bg-[#E53935] hover:bg-[#C62828] text-white px-8 py-3.5 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-lg">
+                    View All Products <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TOP BRANDS ==================== -->
+    <section class="section py-20 bg-[#121212]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title text-[#FF6F61] font-semibold text-sm uppercase tracking-widest block text-center">Trusted Names</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mt-3 mb-4 text-center">Top Brands</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto text-center">We partner with the world's leading bicycle manufacturers</p>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-6">
+                <!-- Trek -->
+                <div class="brand-card group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center flex flex-col items-center justify-center hover:bg-[#E53935]/15 hover:border-[#E53935]/50 hover:-translate-y-1.5 transition-all duration-500 cursor-pointer">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#E53935]/35 via-[#E53935]/15 to-[#B71C1C]/30 border border-[#E53935]/50 shadow-[0_0_20px_rgba(229,57,53,0.35)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-8 h-8 text-[#FF4D4D] filter drop-shadow-[0_2px_6px_rgba(229,57,53,0.6)]" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4L4 24H12L16 16L20 24H28L16 4Z" fill="url(#trek-grad)"/>
+                            <path d="M16 11L11.5 20H14.5L16 17L17.5 20H20.5L16 11Z" fill="#FFFFFF"/>
+                            <defs>
+                                <linearGradient id="trek-grad" x1="4" y1="4" x2="28" y2="24" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FF3333"/>
+                                    <stop offset="1" stop-color="#990000"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-1 text-center">Trek</h3>
+                    <p class="text-gray-400 text-sm text-center">Mountain & Road</p>
+                </div>
+                <!-- Giant -->
+                <div class="brand-card group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center flex flex-col items-center justify-center hover:bg-blue-500/15 hover:border-blue-500/50 hover:-translate-y-1.5 transition-all duration-500 cursor-pointer">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-blue-600/35 via-blue-500/20 to-cyan-400/30 border-2 border-blue-400/60 shadow-[0_0_20px_rgba(59,130,246,0.35)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none">
+                            <path d="M6 22L14 8H26L20 16H14L11 22H6Z" fill="url(#giant-grad)"/>
+                            <circle cx="21" cy="21" r="5" stroke="#60A5FA" stroke-width="2" fill="none"/>
+                            <path d="M18 21H24" stroke="#60A5FA" stroke-width="2"/>
+                            <defs>
+                                <linearGradient id="giant-grad" x1="6" y1="8" x2="26" y2="22" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#60A5FA"/>
+                                    <stop offset="1" stop-color="#1D4ED8"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-1 text-center">Giant</h3>
+                    <p class="text-gray-400 text-sm text-center">Performance Bikes</p>
+                </div>
+                <!-- Hero -->
+                <div class="brand-card group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center flex flex-col items-center justify-center hover:bg-amber-500/15 hover:border-amber-500/50 hover:-translate-y-1.5 transition-all duration-500 cursor-pointer">
+                    <div class="w-16 h-16 rounded-xl rotate-45 bg-gradient-to-br from-amber-500/35 via-yellow-500/20 to-amber-600/30 border border-amber-400/60 shadow-[0_0_20px_rgba(245,158,11,0.35)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                        <div class="-rotate-45 flex items-center justify-center">
+                            <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none">
+                                <path d="M16 3L19.5 10.5L28 11.5L21.5 17L23.5 25L16 20.5L8.5 25L10.5 17L4 11.5L12.5 10.5L16 3Z" fill="url(#hero-grad)" stroke="#FBBF24" stroke-width="1.5"/>
+                                <circle cx="16" cy="14" r="3" fill="#FFFFFF"/>
+                                <defs>
+                                    <linearGradient id="hero-grad" x1="4" y1="3" x2="28" y2="25" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FBBF24"/>
+                                        <stop offset="1" stop-color="#D97706"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-1 text-center">Hero</h3>
+                    <p class="text-gray-400 text-sm text-center">Everyday Cycling</p>
+                </div>
+                <!-- Firefox -->
+                <div class="brand-card group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center flex flex-col items-center justify-center hover:bg-orange-500/15 hover:border-orange-500/50 hover:-translate-y-1.5 transition-all duration-500 cursor-pointer">
+                    <div class="w-16 h-16 rounded-tl-3xl rounded-tr-xl rounded-br-3xl rounded-bl-xl bg-gradient-to-br from-orange-500/35 via-red-500/20 to-amber-500/30 border border-orange-400/60 shadow-[0_0_20px_rgba(249,115,22,0.4)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 3C16 3 10 9 10 15C10 18.5 12.5 21.5 16 22.5C19.5 21.5 22 18.5 22 15C22 9 16 3 16 3Z" fill="url(#firefox-grad)"/>
+                            <path d="M16 9C16 9 13 13 13 16C13 17.8 14.3 19.3 16 19.8C17.7 19.3 19 17.8 19 16C19 13 16 9 16 9Z" fill="#FDE047"/>
+                            <path d="M7 25C11 23 14 24 16 27C18 24 21 23 25 25C22 28 19 29 16 29C13 29 10 28 7 25Z" fill="#FF5722"/>
+                            <defs>
+                                <linearGradient id="firefox-grad" x1="10" y1="3" x2="22" y2="22.5" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FF5722"/>
+                                    <stop offset="1" stop-color="#DC2626"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-1 text-center">Firefox</h3>
+                    <p class="text-gray-400 text-sm text-center">Urban Riders</p>
+                </div>
+                <!-- Montra -->
+                <div class="brand-card group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center flex flex-col items-center justify-center hover:bg-emerald-500/15 hover:border-emerald-500/50 hover:-translate-y-1.5 transition-all duration-500 cursor-pointer">
+                    <div class="w-16 h-16 rounded-3xl bg-gradient-to-br from-emerald-500/35 via-teal-500/20 to-green-600/30 border-2 border-emerald-400/50 shadow-[0_0_20px_rgba(16,185,129,0.35)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none">
+                            <path d="M6 18A10 10 0 1 1 26 18" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M16 18L21 11" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="16" cy="18" r="3" fill="#10B981"/>
+                            <path d="M10 24H22" stroke="#6EE7B7" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-1 text-center">Montra</h3>
+                    <p class="text-gray-400 text-sm text-center">Road & Hybrid</p>
+                </div>
+                <!-- Scott -->
+                <div class="brand-card group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center flex flex-col items-center justify-center hover:bg-purple-500/15 hover:border-purple-500/50 hover:-translate-y-1.5 transition-all duration-500 cursor-pointer">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600/35 via-indigo-600/20 to-purple-800/30 border border-purple-400/60 shadow-[0_0_20px_rgba(139,92,246,0.4)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none">
+                            <path d="M4 22L12 8L20 22H4Z" fill="url(#scott-grad)"/>
+                            <path d="M14 22L21 12L28 22H14Z" fill="#C084FC" fill-opacity="0.7"/>
+                            <path d="M16 4V10M13 7H19" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="scott-grad" x1="4" y1="8" x2="20" y2="22" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#C084FC"/>
+                                    <stop offset="1" stop-color="#7E22CE"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-1 text-center">Scott</h3>
+                    <p class="text-gray-400 text-sm text-center">MTB & E-Bikes</p>
+                </div>
+                <!-- Cannondale -->
+                <div class="brand-card group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center flex flex-col items-center justify-center hover:bg-cyan-500/15 hover:border-cyan-500/50 hover:-translate-y-1.5 transition-all duration-500 cursor-pointer">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500/35 via-sky-500/20 to-blue-600/30 border-2 border-dashed border-cyan-400/70 shadow-[0_0_20px_rgba(6,182,212,0.4)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="10" stroke="#22D3EE" stroke-width="2.5"/>
+                            <circle cx="16" cy="16" r="4" fill="#0891B2"/>
+                            <path d="M16 2V6M16 26V30M2 16H6M26 16H30M6.1 6.1L8.9 8.9M23.1 23.1L25.9 25.9M6.1 25.9L8.9 23.1M23.1 8.9L25.9 6.1" stroke="#67E8F9" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-1 text-center">Cannondale</h3>
+                    <p class="text-gray-400 text-sm text-center">Trail & Race</p>
+                </div>
+                <!-- Bianchi -->
+                <div class="brand-card group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center flex flex-col items-center justify-center hover:bg-teal-400/15 hover:border-teal-400/50 hover:-translate-y-1.5 transition-all duration-500 cursor-pointer">
+                    <div class="w-16 h-16 rounded-[40%] bg-gradient-to-br from-teal-400/35 via-emerald-400/20 to-teal-600/30 border-2 border-teal-300/70 shadow-[0_0_20px_rgba(20,184,166,0.4)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none">
+                            <path d="M6 14L10 20L16 12L22 20L26 14L24 24H8L6 14Z" fill="url(#bianchi-grad)" stroke="#5EEAD4" stroke-width="1"/>
+                            <circle cx="6" cy="13" r="1.5" fill="#5EEAD4"/>
+                            <circle cx="16" cy="11" r="1.5" fill="#5EEAD4"/>
+                            <circle cx="26" cy="13" r="1.5" fill="#5EEAD4"/>
+                            <path d="M8 27C12 29 20 29 24 27" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="bianchi-grad" x1="6" y1="12" x2="26" y2="24" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#5EEAD4"/>
+                                    <stop offset="1" stop-color="#0F766E"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-1 text-center">Bianchi</h3>
+                    <p class="text-gray-400 text-sm text-center">Italian Legacy</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="products.html" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-[#E53935] border border-white/20 hover:border-[#E53935] text-white px-8 py-3.5 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-lg">
+                    Explore Brand Catalog <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CYCLING ACCESSORIES ==================== -->
+    <section class="section py-20 bg-[#F8F9FA]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title text-[#E53935] font-semibold text-sm uppercase tracking-widest block text-center">Gear Up</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4 text-center">Cycling Accessories</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto text-center">Complete your cycling experience with premium accessories</p>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Helmets -->
+                <div class="accessory-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer hover:-translate-y-1">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="images/home1-16.jpg" alt="Helmets" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-gray-900 mb-1 text-center">Helmets</h3>
+                        <p class="text-gray-500 text-sm mb-2 text-center">Safety first, always</p>
+                        <span class="text-[#E53935] font-semibold text-sm inline-flex items-center justify-center">Shop Now <i class="fas fa-arrow-right text-xs ml-1"></i></span>
+                    </div>
+                </div>
+                <!-- Gloves -->
+                <div class="accessory-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer hover:-translate-y-1">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="images/home1-17.jpg" alt="Gloves" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-gray-900 mb-1 text-center">Gloves</h3>
+                        <p class="text-gray-500 text-sm mb-2 text-center">Grip & comfort</p>
+                        <span class="text-[#E53935] font-semibold text-sm inline-flex items-center justify-center">Shop Now <i class="fas fa-arrow-right text-xs ml-1"></i></span>
+                    </div>
+                </div>
+                <!-- Water Bottles -->
+                <div class="accessory-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer hover:-translate-y-1">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="images/home1-18.jpg" alt="Water Bottles" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-gray-900 mb-1 text-center">Water Bottles</h3>
+                        <p class="text-gray-500 text-sm mb-2 text-center">Stay hydrated</p>
+                        <span class="text-[#E53935] font-semibold text-sm inline-flex items-center justify-center">Shop Now <i class="fas fa-arrow-right text-xs ml-1"></i></span>
+                    </div>
+                </div>
+                <!-- Bicycle Lights -->
+                <div class="accessory-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer hover:-translate-y-1">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="images/home1-19.jpg" alt="Bicycle Lights" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-gray-900 mb-1 text-center">Bicycle Lights</h3>
+                        <p class="text-gray-500 text-sm mb-2 text-center">Ride in the dark</p>
+                        <span class="text-[#E53935] font-semibold text-sm inline-flex items-center justify-center">Shop Now <i class="fas fa-arrow-right text-xs ml-1"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="accessories.html" class="inline-flex items-center justify-center gap-2 bg-[#E53935] hover:bg-[#C62828] text-white px-8 py-3.5 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-lg">
+                    View All Accessories <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE US ==================== -->
+    <section class="section py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title text-[#E53935] font-semibold text-sm uppercase tracking-widest">Our Promise</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Why Choose Us</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">We don't just sell bicycles — we build lifelong relationships with riders</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Premium Quality -->
+                <div class="text-center p-6 rounded-2xl hover:bg-[#F8F9FA] dark:hover:bg-[#252525] transition-colors duration-300">
+                    <div class="w-16 h-16 bg-[#E53935]/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-award text-[#E53935] text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Premium Quality</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Every bicycle undergoes rigorous quality checks before reaching your hands</p>
+                </div>
+                <!-- Genuine Accessories -->
+                <div class="text-center p-6 rounded-2xl hover:bg-[#F8F9FA] dark:hover:bg-[#252525] transition-colors duration-300">
+                    <div class="w-16 h-16 bg-[#FF6F61]/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-certificate text-[#FF6F61] text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Genuine Accessories</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">100% authentic products sourced directly from authorized distributors</p>
+                </div>
+                <!-- Certified Mechanics -->
+                <div class="text-center p-6 rounded-2xl hover:bg-[#F8F9FA] dark:hover:bg-[#252525] transition-colors duration-300">
+                    <div class="w-16 h-16 bg-[#E53935]/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-user-cog text-[#E53935] text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Certified Mechanics</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Our team of certified professionals ensures perfect assembly and tuning</p>
+                </div>
+                <!-- Free Assembly -->
+                <div class="text-center p-6 rounded-2xl hover:bg-[#F8F9FA] dark:hover:bg-[#252525] transition-colors duration-300">
+                    <div class="w-16 h-16 bg-[#FF6F61]/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-tools text-[#FF6F61] text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Free Assembly</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Complimentary professional assembly and safety check with every purchase</p>
+                </div>
+                <!-- Fast Delivery -->
+                <div class="text-center p-6 rounded-2xl hover:bg-[#F8F9FA] dark:hover:bg-[#252525] transition-colors duration-300">
+                    <div class="w-16 h-16 bg-[#E53935]/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-shipping-fast text-[#E53935] text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Fast Delivery</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Free doorstep delivery across India with secure packaging guaranteed</p>
+                </div>
+                <!-- Easy Returns -->
+                <div class="text-center p-6 rounded-2xl hover:bg-[#F8F9FA] dark:hover:bg-[#252525] transition-colors duration-300">
+                    <div class="w-16 h-16 bg-[#FF6F61]/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-undo text-[#FF6F61] text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Easy Returns</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Hassle-free 7-day return policy on all bicycles and accessories</p>
+                </div>
+                <!-- Warranty Support -->
+                <div class="text-center p-6 rounded-2xl hover:bg-[#F8F9FA] dark:hover:bg-[#252525] transition-colors duration-300">
+                    <div class="w-16 h-16 bg-[#E53935]/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-shield-alt text-[#E53935] text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Warranty Support</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Manufacturer warranty with dedicated after-sales support team</p>
+                </div>
+                <!-- Affordable Prices -->
+                <div class="text-center p-6 rounded-2xl hover:bg-[#F8F9FA] dark:hover:bg-[#252525] transition-colors duration-300">
+                    <div class="w-16 h-16 bg-[#FF6F61]/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-tags text-[#FF6F61] text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">Affordable Prices</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Best prices guaranteed with exclusive online offers and EMI options</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BICYCLE REPAIR & MAINTENANCE SERVICES ==================== -->
+    <section class="section py-20 bg-[#121212]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title text-[#FF6F61] font-semibold text-sm uppercase tracking-widest">Expert Care</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mt-3 mb-4">Repair & Maintenance</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Keep your bicycle running smooth with our professional servicing plans</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tune-up Service -->
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 group">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-14 h-14 bg-[#E53935]/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-cog text-[#E53935] text-xl animate-spin-slow"></i>
+                        </div>
+                        <span class="text-2xl font-black text-[#E53935]">₹1,200</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Basic Tune-up</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">Complete bike inspection, brake adjustment, gear tuning, lubrication, and tire pressure check</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#E53935] text-xs"></i>Brake adjustment</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#E53935] text-xs"></i>Gear tuning</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#E53935] text-xs"></i>Full lubrication</li>
+                    </ul>
+                    <button class="w-full bg-[#E53935]/10 hover:bg-[#E53935] text-[#E53935] hover:text-white font-semibold py-3 rounded-xl transition-all duration-300 text-sm border border-[#E53935]/30 hover:border-[#E53935]">Book Now</button>
+                </div>
+                <!-- Brake Service -->
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 group">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-14 h-14 bg-[#FF6F61]/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-hand-paper text-[#FF6F61] text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-black text-[#FF6F61]">₹800</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Brake Service</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">Complete brake system overhaul including pad replacement, cable tension, and rotor truing</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#FF6F61] text-xs"></i>Pad replacement</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#FF6F61] text-xs"></i>Cable adjustment</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#FF6F61] text-xs"></i>Rotor truing</li>
+                    </ul>
+                    <button class="w-full bg-[#FF6F61]/10 hover:bg-[#FF6F61] text-[#FF6F61] hover:text-white font-semibold py-3 rounded-xl transition-all duration-300 text-sm border border-[#FF6F61]/30 hover:border-[#FF6F61]">Book Now</button>
+                </div>
+                <!-- Gear Service -->
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 group">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-14 h-14 bg-[#E53935]/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-exchange-alt text-[#E53935] text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-black text-[#E53935]">₹1,500</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Gear Service</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">Derailleur adjustment, chain inspection, cassette cleaning, and precise shifting calibration</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#E53935] text-xs"></i>Derailleur tuning</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#E53935] text-xs"></i>Chain inspection</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#E53935] text-xs"></i>Shifting calibration</li>
+                    </ul>
+                    <button class="w-full bg-[#E53935]/10 hover:bg-[#E53935] text-[#E53935] hover:text-white font-semibold py-3 rounded-xl transition-all duration-300 text-sm border border-[#E53935]/30 hover:border-[#E53935]">Book Now</button>
+                </div>
+                <!-- Tire Service -->
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 group">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-14 h-14 bg-[#FF6F61]/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-circle text-[#FF6F61] text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-black text-[#FF6F61]">₹600</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Tire Service</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">Tire patching, tube replacement, wheel truing, spoke tensioning, and rim inspection</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#FF6F61] text-xs"></i>Tire patching</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#FF6F61] text-xs"></i>Wheel truing</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#FF6F61] text-xs"></i>Spoke tensioning</li>
+                    </ul>
+                    <button class="w-full bg-[#FF6F61]/10 hover:bg-[#FF6F61] text-[#FF6F61] hover:text-white font-semibold py-3 rounded-xl transition-all duration-300 text-sm border border-[#FF6F61]/30 hover:border-[#FF6F61]">Book Now</button>
+                </div>
+                <!-- Suspension Service -->
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 group">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-14 h-14 bg-[#E53935]/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-arrows-alt-v text-[#E53935] text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-black text-[#E53935]">₹3,500</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Suspension Service</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">Fork and shock servicing, seal replacement, oil change, and rebound/compression tuning</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#E53935] text-xs"></i>Fork servicing</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#E53935] text-xs"></i>Seal replacement</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#E53935] text-xs"></i>Oil change</li>
+                    </ul>
+                    <button class="w-full bg-[#E53935]/10 hover:bg-[#E53935] text-[#E53935] hover:text-white font-semibold py-3 rounded-xl transition-all duration-300 text-sm border border-[#E53935]/30 hover:border-[#E53935]">Book Now</button>
+                </div>
+                <!-- Annual Plan -->
+                <div class="bg-gradient-to-br from-[#E53935]/20 to-[#FF6F61]/20 backdrop-blur-sm border border-[#E53935]/30 rounded-2xl p-8 hover:from-[#E53935]/30 hover:to-[#FF6F61]/30 transition-all duration-500 group relative overflow-hidden">
+                    <div class="absolute top-4 right-4">
+                        <span class="bg-[#E53935] text-white text-xs font-bold px-3 py-1 rounded-full">Best Value</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-14 h-14 bg-[#E53935]/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <i class="fas fa-calendar-check text-[#E53935] text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-black text-[#E53935]">₹4,999</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Annual Plan</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">Unlimited servicing for a full year — includes all basic and premium maintenance tasks</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#E53935] text-xs"></i>4 scheduled services</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#E53935] text-xs"></i>Free parts worth ₹2,000</li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm"><i class="fas fa-check text-[#E53935] text-xs"></i>Priority booking</li>
+                    </ul>
+                    <button class="w-full bg-[#E53935] hover:bg-[#C62828] text-white font-semibold py-3 rounded-xl transition-all duration-300 text-sm">Book Now</button>
+            </div>
+            <div class="text-center mt-12">
+                <a href="services.html" class="inline-flex items-center justify-center gap-2 bg-[#E53935] hover:bg-[#C62828] text-white px-8 py-3.5 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-lg">
+                    View All Maintenance Services <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CUSTOMER TESTIMONIALS ==================== -->
+    <section class="section py-20 bg-[#F8F9FA]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title text-[#E53935] font-semibold text-sm uppercase tracking-widest">Testimonials</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">What Our Customers Say</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Hear from thousands of happy cyclists who trust CycleHub</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star text-amber-400 text-sm"></i>
+                        <i class="fas fa-star text-amber-400 text-sm"></i>
+                        <i class="fas fa-star text-amber-400 text-sm"></i>
+                        <i class="fas fa-star text-amber-400 text-sm"></i>
+                        <i class="fas fa-star text-amber-400 text-sm"></i>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-6">"Best bicycle shopping experience I've ever had! The staff helped me pick the perfect Trek Marlin 7 for my weekend trails. The assembly was flawless and they even gave me a free helmet. Highly recommend CycleHub!"</p>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
+                        <img src="images/home1-20.jpg" alt="Rahul Sharma" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Rahul Sharma</h4>
+                            <p class="text-gray-500 text-sm">Mumbai, Maharashtra</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star text-amber-400 text-sm"></i>
+                        <i class="fas fa-star text-amber-400 text-sm"></i>
+                        <i class="fas fa-star text-amber-400 text-sm"></i>
+                        <i class="fas fa-star text-amber-400 text-sm"></i>
+                        <i class="fas fa-star text-amber-400 text-sm"></i>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-6">"I bought a Giant Defy Advanced 2 for my first century ride. The team not only helped me choose the right size but also provided a free fitting session. Their after-sales support is incredible. Will be coming back for accessories!"</p>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
+                        <img src="images/home1-21.jpg" alt="Priya Patel" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Priya Patel</h4>
+                            <p class="text-gray-500 text-sm">Bangalore, Karnataka</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star text-amber-400 text-sm"></i>
+                        <i class="fas fa-star text-amber-400 text-sm"></i>
+                        <i class="fas fa-star text-amber-400 text-sm"></i>
+                        <i class="fas fa-star text-amber-400 text-sm"></i>
+                        <i class="fas fa-star-half-alt text-amber-400 text-sm"></i>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-6">"Got bikes for my entire family — two Hero Sprint for the kids and a Montra Helios for myself. The annual maintenance plan is a great deal. Our bikes always feel brand new. CycleHub has become our go-to shop!"</p>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
+                        <img src="images/home1-22.jpg" alt="Arun Kumar" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Arun Kumar</h4>
+                            <p class="text-gray-500 text-sm">Chennai, Tamil Nadu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BLOG SECTION ==================== -->
+    <section class="section py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="section-title text-[#E53935] font-semibold text-sm uppercase tracking-widest">Read Our Blog</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Cycling Stories & Tips</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Stay updated with the latest in cycling — from beginner tips to pro insights</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog 1 -->
+                <article class="blog-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/home1-2.jpg" alt="Mountain Biking Guide" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-[#E53935] text-white text-xs font-bold px-3 py-1 rounded-full">Mountain Biking</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-gray-400 text-sm mb-3">
+                            <span><i class="far fa-calendar mr-1"></i>Jan 15, 2026</span>
+                            <span><i class="far fa-clock mr-1"></i>8 min read</span>
+                        </div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-2 group-hover:text-[#E53935] transition-colors line-clamp-2">Beginner's Guide to Mountain Biking in India: Top Trails & Essential Gear</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3">Discover the best mountain biking trails across India and learn what gear you need to get started safely and confidently.</p>
+                        <a href="blog-mountain-biking.html" class="text-[#E53935] font-semibold text-sm hover:underline inline-flex items-center gap-1">Read More <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+                </article>
+                <!-- Blog 2 -->
+                <article class="blog-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/home1-3.jpg" alt="Road Bike Maintenance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-[#FF6F61] text-white text-xs font-bold px-3 py-1 rounded-full">Maintenance</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-gray-400 text-sm mb-3">
+                            <span><i class="far fa-calendar mr-1"></i>Feb 3, 2026</span>
+                            <span><i class="far fa-clock mr-1"></i>6 min read</span>
+                        </div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-2 group-hover:text-[#E53935] transition-colors line-clamp-2">10 Essential Bicycle Maintenance Tips Every Rider Should Know</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3">Keep your bicycle in top condition with these simple yet effective maintenance tips that can save you money on repairs.</p>
+                        <a href="blog-maintenance-tips.html" class="text-[#E53935] font-semibold text-sm hover:underline inline-flex items-center gap-1">Read More <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+                </article>
+                <!-- Blog 3 -->
+                <article class="blog-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/home1-5.jpg" alt="Electric Bikes Future" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">E-Bikes</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-gray-400 text-sm mb-3">
+                            <span><i class="far fa-calendar mr-1"></i>Mar 12, 2026</span>
+                            <span><i class="far fa-clock mr-1"></i>10 min read</span>
+                        </div>
+                        <h3 class="font-bold text-gray-900 text-lg mb-2 group-hover:text-[#E53935] transition-colors line-clamp-2">The Rise of Electric Bikes in India: Everything You Need to Know</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3">Electric bikes are transforming urban mobility in India. Here's a complete guide to choosing the right e-bike for your commute.</p>
+                        <a href="blog-electric-bikes.html" class="text-[#E53935] font-semibold text-sm hover:underline inline-flex items-center gap-1">Read More <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+                </article>
+            </div>
+            <div class="text-center mt-12">
+                <a href="blog.html" class="inline-flex items-center gap-2 bg-gray-900 hover:bg-[#E53935] text-white px-8 py-3.5 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-lg">
+                    View All Posts <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEWSLETTER SECTION ==================== -->
+    <section class="section py-20 bg-[#121212] relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-72 h-72 bg-[#E53935] rounded-full blur-[150px]"></div>
+            <div class="absolute bottom-10 right-10 w-72 h-72 bg-[#FF6F61] rounded-full blur-[150px]"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-10 md:p-14">
+                <div class="w-16 h-16 bg-[#E53935]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-envelope text-[#E53935] text-2xl"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Stay in the Loop</h2>
+                <p class="text-gray-400 text-lg mb-8 max-w-xl mx-auto">Subscribe to our newsletter for exclusive deals, new arrivals, cycling tips, and insider-only offers delivered straight to your inbox.</p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Enter your email address" class="flex-1 bg-white/10 border border-white/20 text-white placeholder-gray-500 rounded-xl px-5 py-4 focus:outline-none focus:border-[#E53935] focus:ring-2 focus:ring-[#E53935]/30 transition-all duration-300">
+                    <button type="submit" class="bg-[#E53935] hover:bg-[#C62828] text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap">
+                        Subscribe <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                </form>
+                <p class="text-gray-600 text-sm mt-4">No spam, ever. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER CONTAINER ==================== -->
+    <div id="footer-container"></div>
+
+    <!-- ==================== SCROLL TO TOP BUTTON ==================== -->
+    <button id="scroll-top" class="fixed bottom-6 right-6 w-12 h-12 bg-[#E53935] hover:bg-[#C62828] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50 opacity-0 pointer-events-none translate-y-4" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loading-screen');
+            setTimeout(function() {
+                loader.style.opacity = '0';
+                loader.style.transition = 'opacity 0.5s ease';
+                setTimeout(function() {
+                    loader.style.display = 'none';
+                }, 500);
+            }, 800);
+        });
+
+        // Scroll to top button visibility
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.getElementById('scroll-top');
+            if (window.scrollY > 400) {
+                scrollBtn.style.opacity = '1';
+                scrollBtn.style.pointerEvents = 'auto';
+                scrollBtn.style.transform = 'translateY(0)';
+            } else {
+                scrollBtn.style.opacity = '0';
+                scrollBtn.style.pointerEvents = 'none';
+                scrollBtn.style.transform = 'translateY(1rem)';
+            }
+        });
+    </script>
+</body>
+</html>
